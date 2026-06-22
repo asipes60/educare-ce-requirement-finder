@@ -1,6 +1,12 @@
 # EduCare CE Requirement Finder
 
-This is a self-contained prototype for the LearnWorlds CE Requirement Finder page.
+This is the LearnWorlds-embeddable CE Requirement Finder.
+
+Live public URL:
+
+```text
+https://asipes60.github.io/educare-ce-requirement-finder/
+```
 
 ## What It Does
 
@@ -11,12 +17,8 @@ This is a self-contained prototype for the LearnWorlds CE Requirement Finder pag
   - LCSW / LISW
   - Psychologist
   - BCBA / BCaBA
-- Shows verified requirement summaries only when a source-reviewed record exists.
-- Uses California BBS as the first verified seed:
-  - LPCC / LPC / LMHC
-  - LMFT
-  - LCSW / LISW
-- Keeps all other state-license combinations in `needs_review` status.
+- Shows verified requirement summaries from the cached public Airtable registry.
+- Uses 250 verified records from Growth Hub `CE Requirements`: 50 BACB national certification-maintenance rows and 200 state-board rows across all 50 states.
 - Uses NBCC ACEP No. 8109 only after course-level matching is verified.
 
 ## Run Locally
@@ -44,7 +46,7 @@ Use an iframe embed on the LearnWorlds page after the tool is hosted:
 
 ```html
 <iframe
-  src="https://YOUR-HOSTED-CE-FINDER-URL"
+  src="https://asipes60.github.io/educare-ce-requirement-finder/"
   title="EduCare CE Requirement Finder"
   style="width:100%;min-height:900px;border:0;"
   loading="lazy"
@@ -53,20 +55,21 @@ Use an iframe embed on the LearnWorlds page after the tool is hosted:
 
 ## Data Governance
 
-This prototype uses local seed data. The production version should replace local records
-with a backend endpoint that reads verified Airtable records, caches public-safe data, and
-never exposes Airtable credentials in browser JavaScript.
+The public app serves `public/requirements.json` through `/api/requirements`. Refresh the cache from the private Airtable source with:
+
+```bash
+npm run refresh:registry -- --env /path/to/.env.local
+```
+
+The browser receives only public-safe verified fields. Airtable credentials, reviewer notes, and internal course-match IDs are not shipped in the public payload.
 
 ## Production Registry Source
 
-Created 2026-06-21 in Airtable Growth Hub.
+Created 2026-06-21 in Airtable Growth Hub. Current public cache refreshed 2026-06-22.
 
 - Base: `EduCare Growth Hub` (`app0SleLSUfJ1ME03`)
 - Table: `CE Requirements` (`tblKG69LIBl6DIj3S`)
-- Seed records:
-  - `CA-lpc-lpcc-lmhc` (`recR8PqfoeNL6vW3z`)
-  - `CA-lmft` (`reclfKlT3au5rYON6`)
-  - `CA-lcsw-lisw` (`recZHTPd01qQ9kX0n`)
+- Current scope: 250 verified records.
 
 Core fields:
 
