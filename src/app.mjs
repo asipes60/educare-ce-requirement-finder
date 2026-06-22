@@ -137,7 +137,7 @@ function lookupCurrentRequirement() {
 
 async function loadCachedRequirements() {
   try {
-    const response = await fetch("/api/requirements", {
+    const response = await fetch(new URL("./api/requirements", window.location.href), {
       headers: { accept: "application/json" },
     });
     if (!response.ok) return;
