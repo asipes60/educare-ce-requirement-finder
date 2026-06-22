@@ -1,4 +1,5 @@
 dist/
+vercel-static/
 .env
 .env.local
 node_modules/
