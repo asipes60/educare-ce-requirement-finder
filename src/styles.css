@@ -1,0 +1,244 @@
+:root {
+  color-scheme: light;
+  --ink: #1c2730;
+  --muted: #5f6c75;
+  --line: #d8e0e5;
+  --panel: #ffffff;
+  --canvas: #f5f7f8;
+  --brand-blue: #1a1a8c;
+  --brand-soft: #ececff;
+  --brand-focus: rgba(26, 26, 140, 0.24);
+  --blue: var(--brand-blue);
+  --gold: #936b13;
+  --gold-soft: #fbefd3;
+  --red: #9f2f35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+.shell {
+  width: calc(100% - 48px);
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+.intro {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.brand-logo {
+  display: block;
+  width: clamp(118px, 13vw, 150px);
+  height: auto;
+  margin-bottom: 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.lede {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.tool-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.lookup-panel,
+.result-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 10px 30px rgba(28, 39, 48, 0.07);
+}
+
+.lookup-panel {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  font-weight: 700;
+}
+
+select,
+button {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 6px;
+  font: inherit;
+}
+
+select {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 650;
+  padding: 0 12px;
+}
+
+select option {
+  font-size: 0.92rem;
+}
+
+button {
+  border: 0;
+  background: var(--brand-blue);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:focus,
+select:focus {
+  outline: 3px solid var(--brand-focus);
+  outline-offset: 2px;
+}
+
+.panel-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.result-card {
+  width: 100%;
+  padding: 24px;
+}
+
+.status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 0 10px;
+  background: var(--brand-soft);
+  color: var(--brand-blue);
+  font-weight: 800;
+}
+
+.needs-review .status-pill {
+  background: var(--gold-soft);
+  color: var(--gold);
+}
+
+.result-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: baseline;
+  padding: 16px;
+  border-left: 4px solid var(--blue);
+  background: #f0f4fb;
+}
+
+.result-summary strong {
+  font-size: 1.6rem;
+}
+
+.category-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.category-list li,
+.empty-match,
+.course-card {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.category-list small,
+.course-card small,
+.empty-match span,
+.muted {
+  color: var(--muted);
+}
+
+.source-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.source-list a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.disclaimer {
+  max-width: 900px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: calc(100% - 24px);
+    padding-top: 22px;
+  }
+
+  .tool-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lookup-panel {
+    position: static;
+  }
+
+  .result-card {
+    padding: 18px;
+  }
+}

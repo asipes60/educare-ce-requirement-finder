@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduCare CE Requirement Finder</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="intro">
+        <img
+          class="brand-logo"
+          src="./assets/educare-logo.png"
+          alt="EduCare"
+          width="330"
+          height="150"
+        />
+        <h1>Find CE requirements by state and license type.</h1>
+        <p class="lede">
+          Select a jurisdiction and license family to view verified renewal requirements,
+          required categories, source links, and conservative EduCare course matches.
+        </p>
+      </section>
+
+      <section class="tool-layout" aria-label="CE requirement lookup tool">
+        <form id="lookup-form" class="lookup-panel">
+          <label for="state">
+            State
+            <select id="state" name="state"></select>
+          </label>
+
+          <label for="license">
+            License type
+            <select id="license" name="license"></select>
+          </label>
+
+          <button type="submit">Show requirements</button>
+
+          <p class="panel-note">
+            Verified results include source links and review dates. Unverified combinations
+            remain hidden behind a review status instead of showing estimated requirements.
+          </p>
+        </form>
+
+        <section id="result" aria-live="polite"></section>
+      </section>
+
+      <p class="disclaimer">
+        This tool is an educational reference, not legal advice. Practitioners should verify
+        requirements with their licensing board before relying on any continuing education course.
+      </p>
+    </main>
+
+    <script type="module" src="./src/app.mjs"></script>
+  </body>
+</html>
