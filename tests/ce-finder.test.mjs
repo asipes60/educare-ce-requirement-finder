@@ -2,6 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 
 import {
+  getLicenseOptions,
   getPublicRequirements,
   getStateOptions,
   lookupRequirement,
@@ -46,6 +47,14 @@ describe("CE requirement lookup", () => {
     assert.equal(states.length, 50);
     assert.deepEqual(states[0], { code: "AL", name: "Alabama" });
     assert.deepEqual(states.at(-1), { code: "WY", name: "Wyoming" });
+  });
+
+  it("exposes BCBA/BCBA-D and BCaBA as separate public license options", () => {
+    const licenseKeys = getLicenseOptions().map((license) => license.key);
+
+    assert.ok(licenseKeys.includes("bcba"));
+    assert.ok(licenseKeys.includes("bcaba"));
+    assert.ok(!licenseKeys.includes("bcba-bcaba"));
   });
 
   it("keeps conservative course matching from implying pending NBCC approval", () => {

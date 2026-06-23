@@ -47,6 +47,42 @@ describe("Airtable registry cache", () => {
     assert.ok(!Object.hasOwn(result, "courseMatchIds"));
   });
 
+  it("maps BCBA and BCaBA Airtable records to separate credential keys and totals", () => {
+    const bcba = normalizeAirtableRequirementRecord({
+      id: "recBcba",
+      fields: {
+        ...okPsychologistRecord.fields,
+        fldKjbQXLHSWYhSKQ: "CA-bcba",
+        fldJ9nqBIqOnBPI9n: { name: "California" },
+        fldxQKAXTObQBwnwV: "CA",
+        fldfh8pX7tDb2eWU5: { name: "BCBA / BCBA-D" },
+        fldVGrMdoob2kazkK: "Behavior Analyst Certification Board",
+        fldypy1p2okplBTOS: 32,
+        fldLu2j7GD1vA6sGh: { name: "CEUs" },
+      },
+    });
+    const bcaba = normalizeAirtableRequirementRecord({
+      id: "recBcaba",
+      fields: {
+        ...okPsychologistRecord.fields,
+        fldKjbQXLHSWYhSKQ: "CA-bcaba",
+        fldJ9nqBIqOnBPI9n: { name: "California" },
+        fldxQKAXTObQBwnwV: "CA",
+        fldfh8pX7tDb2eWU5: { name: "BCaBA" },
+        fldVGrMdoob2kazkK: "Behavior Analyst Certification Board",
+        fldypy1p2okplBTOS: 20,
+        fldLu2j7GD1vA6sGh: { name: "CEUs" },
+      },
+    });
+
+    assert.equal(bcba.licenseKey, "bcba");
+    assert.equal(bcba.licenseLabel, "BCBA / BCBA-D");
+    assert.equal(bcba.totalHours, 32);
+    assert.equal(bcaba.licenseKey, "bcaba");
+    assert.equal(bcaba.licenseLabel, "BCaBA");
+    assert.equal(bcaba.totalHours, 20);
+  });
+
   it("does not expose records that are not verified", () => {
     const result = normalizeAirtableRequirementRecord({
       ...okPsychologistRecord,

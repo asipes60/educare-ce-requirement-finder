@@ -73,9 +73,14 @@ export const licenseFamilies = [
     publicLabel: "Psychologist",
   },
   {
-    key: "bcba-bcaba",
-    label: "BCBA / BCaBA",
+    key: "bcba",
+    label: "BCBA / BCBA-D",
     publicLabel: "Behavior Analyst",
+  },
+  {
+    key: "bcaba",
+    label: "BCaBA",
+    publicLabel: "Assistant Behavior Analyst",
   },
 ];
 

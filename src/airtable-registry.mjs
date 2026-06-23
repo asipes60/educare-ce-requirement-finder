@@ -40,7 +40,8 @@ function normalizeLicenseKey(value) {
     .replaceAll(" / ", "/")
     .replaceAll(" ", "");
 
-  if (normalized.includes("bcba")) return "bcba-bcaba";
+  if (normalized.includes("bcaba")) return "bcaba";
+  if (normalized.includes("bcba")) return "bcba";
   if (normalized.includes("lmft")) return "lmft";
   if (normalized.includes("lcsw") || normalized.includes("lisw")) return "lcsw-lisw";
   if (normalized.includes("psychologist")) return "psychologist";
