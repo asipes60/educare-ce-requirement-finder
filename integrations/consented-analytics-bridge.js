@@ -22,7 +22,10 @@
     var props={tracking_source:'learnworlds_native',page_path:window.location.pathname};
     if (typeof data.currency === 'string' && /^[A-Z]{3}$/.test(data.currency)) props.currency=data.currency;
     if (typeof data.value === 'number' && Number.isFinite(data.value) && data.value >= 0) props.value=data.value;
-    if (Array.isArray(data.items)) props.item_ids=data.items.slice(0,20).map(function(item){return safeId(item && item.item_id);}).filter(Boolean);
+    // Native purchase confirmations still use legacy id; discovery events use item_id.
+    if (Array.isArray(data.items)) props.item_ids=data.items.slice(0,20).map(function(item){
+      return safeId(item && item.item_id) || (name === 'purchase' ? safeId(item && item.id) : null);
+    }).filter(Boolean);
     if (name === 'purchase') {
       var id=safeId(data.transaction_id);
       if (!id || seenPurchases.has(id)) return;

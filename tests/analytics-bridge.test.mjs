@@ -28,6 +28,28 @@ test('purchase bridge requires transaction id and deduplicates confirmations',()
  assert.equal(captured.length,1);
  assert.equal(captured[0][1].$insert_id,'educare-purchase-order-123');
 });
+test('LearnWorlds legacy purchase IDs survive the analytics bridge',()=>{
+ const {window,captured}=setup();
+ // Shape observed in the October 20 native zero-dollar confirmation.
+ window.dataLayer.push(['event','purchase',{
+  transaction_id:'purchase-qa',value:0,currency:'USD',
+  items:[{id:'68f918cf93892f61e3020ff8',name:'Private course text',price:0,category:'course',quantity:1}]
+ }]);
+ assert.deepEqual(Array.from(captured[0][1].item_ids),['68f918cf93892f61e3020ff8']);
+ assert.equal(captured[0][1].value,0);
+ assert.equal(JSON.stringify(captured).includes('Private course text'),false);
+});
+test('purchase item IDs prefer GA4 format and validate legacy IDs',()=>{
+ const {window,captured}=setup();
+ window.dataLayer.push({event:'purchase',ecommerce:{transaction_id:'qa-mixed',items:[
+  {item_id:'modern-course',id:'legacy-course'},
+  {id:'legacy-course-2'},
+  {id:'private@example.com'},
+  {id:123},null
+ ]}});
+ assert.deepEqual(Array.from(captured[0][1].item_ids),['modern-course','legacy-course-2']);
+ assert.equal(JSON.stringify(captured).includes('private@example.com'),false);
+});
 test('Finder bridge rejects other frames, origins and arbitrary payload fields',()=>{
  const {send,captured}=setup();
  const data={type:'educare-ce-finder:analytics',event:'ce_finder_course_clicked',course_path:'/course/example',draft:'private text'};
