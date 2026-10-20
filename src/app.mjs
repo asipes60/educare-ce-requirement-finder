@@ -3,7 +3,7 @@ import {
   getLicenseOptions,
   getStateOptions,
   lookupRequirement,
-} from "./ce-finder.mjs?v=20261020-1";
+} from "./ce-finder.mjs?v=20261020-2";
 
 const stateSelect = document.querySelector("#state");
 const loadStatus = document.querySelector("#load-status");
@@ -167,3 +167,22 @@ form.addEventListener("submit", (event) => {
 
 renderResult(lookupRequirement("CA", "lpc-lpcc-lmhc"));
 loadCachedRequirements();
+
+// Let the host page use one page scrollbar as results change or reflow on mobile.
+if (window.parent !== window) {
+  const shell = document.querySelector(".shell");
+  let pendingFrame = false;
+  const reportHeight = () => {
+    if (pendingFrame) return;
+    pendingFrame = true;
+    requestAnimationFrame(() => {
+      pendingFrame = false;
+      window.parent.postMessage({
+        type: "educare-ce-finder:resize",
+        height: Math.ceil(shell.getBoundingClientRect().height),
+      }, "https://educarecomplete.com");
+    });
+  };
+  new ResizeObserver(reportHeight).observe(shell);
+  reportHeight();
+}

@@ -22,7 +22,7 @@ body {
   margin: 0;
   background: var(--canvas);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.5;
 }
 
@@ -75,6 +75,41 @@ h1 {
   align-items: start;
 }
 
+.results-panel,
+#result,
+.lookup-panel {
+  min-width: 0;
+}
+
+#load-status {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+html[data-embedded="true"] .intro {
+  display: none;
+}
+
+html[data-embedded="true"] .shell {
+  padding-top: 16px;
+}
+
+.course-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.course-card p {
+  margin-bottom: 8px;
+}
+
+.course-card h4,
+.result-card h2,
+.source-list a {
+  overflow-wrap: anywhere;
+}
+
 .lookup-panel,
 .result-card {
   border: 1px solid var(--line);
@@ -125,9 +160,18 @@ button {
 }
 
 button:focus,
-select:focus {
+select:focus,
+a:focus-visible {
   outline: 3px solid var(--brand-focus);
   outline-offset: 2px;
+}
+
+.course-card > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--brand-blue);
+  font-weight: 700;
 }
 
 .panel-note {
