@@ -118,12 +118,12 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-2-live
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-3-verified
 Open in a new tab, rel="noopener noreferrer".
 
 The approved introduction and fallback link are published on the LearnWorlds host
 page. The iframe and direct-open link use the release query above to avoid old
-HTML cached by returning browsers. Entry/dependency modules use `20261020-2` in their import URLs.
+HTML cached by returning browsers. Entry/dependency modules use `20261020-3` in their import URLs.
 Update both release versions when publishing changed scripts.
 
 GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static
@@ -147,3 +147,24 @@ render confirmed readable controls without horizontal clipping. The registry JSO
 was compacted by about 83KB without changing its data; refreshes preserve this.
 All 20 tests and both builds passed. PageSpeed returned HTTP 429, so no new mobile
 performance score or LCP measurement is claimed.
+
+## Consented funnel analytics
+
+`integrations/consented-analytics-bridge.js` is installed on the LearnWorlds host
+in both logged-in and logged-out head slots, inside a separate
+`<script type="text/plain" data-accept-cookie="analytics">` block after existing
+PostHog initialization. Do not add an unconditional copy to the standalone app.
+The app sends only result status/match count and course paths to the expected host.
+The host verifies iframe source and origin before capturing the allowlisted events.
+
+The bridge forwards supported native ecommerce dataLayer events without replacing
+LearnWorlds' GA4 configuration. Purchase confirmations require a transaction ID
+and use a deterministic insert ID. No form text, goal drafts, item names, or
+customer fields are forwarded. Standalone Finder interactions are not tracked.
+
+Live Finder results-view and course-click receipt were verified in PostHog.
+Native purchase/checkout forwarding is tested, but end-to-end receipt remains
+unverified in the administrator session. A live purchase was not submitted.
+Fresh anonymous consent testing, real-phone interactions, GA4 receipt, and a new
+mobile lab speed measurement remain separate validation steps. All 24 tests and
+both builds passed for this release.
