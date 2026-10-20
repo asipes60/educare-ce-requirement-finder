@@ -1,3 +1,4 @@
+import { courseEligibility } from "./course-eligibility.mjs";
 import {
   educareCourses,
   licenseFamilies,
@@ -31,25 +32,20 @@ function clonePublicRequirement(requirement) {
     ...publicRequirement,
     categories: requirement.categories.map((category) => ({ ...category })),
     courseMatches: buildCourseMatches(requirement),
+    courseEligibilityStatus: courseEligibility.find(row => row.stateCode === requirement.stateCode && row.licenseKey === requirement.licenseKey)?.status ?? "unresolved",
+    courseEligibilityNotes: courseEligibility.find(row => row.stateCode === requirement.stateCode && row.licenseKey === requirement.licenseKey)?.notes ?? "Course eligibility has not been verified for this credential.",
     sourceUrls: [...requirement.sourceUrls],
   };
 }
 
 function buildCourseMatches(requirement) {
-  if (requirement.status !== "verified" || !requirement.courseMatchIds?.length) {
-    return [];
-  }
-
-  return requirement.courseMatchIds
-    .map((courseId) => educareCourses.find((course) => course.id === courseId))
-    .filter((course) => course?.approvalStatus === "approved")
-    .map((course) => ({
-      id: course.id,
-      title: course.title,
-      creditValue: course.creditValue,
-      creditUnit: course.creditUnit,
-      providerStatement: course.providerStatement,
-    }));
+  if (requirement.status !== "verified") return [];
+  const eligibility = courseEligibility.find(row => row.stateCode === requirement.stateCode && row.licenseKey === requirement.licenseKey);
+  if (eligibility?.status !== "verified") return [];
+  return educareCourses
+    .filter(course => course.approvalStatus === "approved" && course.status === "available"
+      && eligibility.courseIds.includes(course.id))
+    .map(({ eligibleStates, eligibleLicenses, approvalStatus, status, ...course }) => ({...course, eligibilitySources: [...eligibility.sources], eligibilityNotes: eligibility.notes, eligibilityReviewedAt: eligibility.reviewedAt}));
 }
 
 function buildPlaceholderRequirement(stateCode, licenseKey) {

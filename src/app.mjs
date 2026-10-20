@@ -6,6 +6,7 @@ import {
 } from "./ce-finder.mjs";
 
 const stateSelect = document.querySelector("#state");
+const loadStatus = document.querySelector("#load-status");
 const licenseSelect = document.querySelector("#license");
 const form = document.querySelector("#lookup-form");
 const resultRegion = document.querySelector("#result");
@@ -56,12 +57,13 @@ function renderSources(sourceUrls) {
   return `<div class="source-list">${links}</div>`;
 }
 
-function renderCourseMatches(courseMatches) {
+function renderCourseMatches(courseMatches, eligibilityNotes) {
   if (!courseMatches.length) {
     return `
       <div class="empty-match">
         <strong>No conservatively matched EduCare course yet.</strong>
-        <span>EduCare can add courses here only when the approval and topic fit are supportable.</span>
+        <span>Course eligibility has not been established for this selection. Confirm accepted providers and course formats with your board.</span>
+        <p>${eligibilityNotes ?? ""}</p>
       </div>
     `;
   }
@@ -72,7 +74,7 @@ function renderCourseMatches(courseMatches) {
         <article class="course-card">
           <h4>${course.title}</h4>
           <p>${course.creditValue} ${course.creditUnit}</p>
-          <small>${course.providerStatement}</small>
+          <small>${course.providerStatement}</small><p>General renewal CE. Required-category credit has not been verified.</p><p>${course.eligibilityNotes}</p><p>Course eligibility reviewed ${course.eligibilityReviewedAt}</p>${renderSources(course.eligibilitySources)}<a href="${course.url}" target="_blank" rel="noopener noreferrer">View course</a>
         </article>
       `
     )
@@ -99,7 +101,7 @@ function renderVerified(result) {
       </section>
       <section>
         <h3>EduCare course matches</h3>
-        ${renderCourseMatches(result.courseMatches)}
+        ${renderCourseMatches(result.courseMatches, result.courseEligibilityNotes)}
       </section>
       <footer>
         <p>${result.board}</p>
@@ -137,17 +139,18 @@ function lookupCurrentRequirement() {
 
 async function loadCachedRequirements() {
   try {
-    const response = await fetch(new URL("./api/requirements", window.location.href), {
+    const response = await fetch(new URL("../public/requirements.json", import.meta.url), {
       headers: { accept: "application/json" },
     });
-    if (!response.ok) return;
+    if (!response.ok) throw new Error("Registry unavailable");
     const payload = await response.json();
     if (Array.isArray(payload.records)) {
       cachedLookup = createRequirementLookup(payload.records);
       renderResult(lookupCurrentRequirement());
-    }
+      loadStatus.textContent = "Registry loaded. Check each result’s review date.";
+    } else { throw new Error("Invalid registry"); }
   } catch {
-    // The local static fallback still works for development without the cache.
+    loadStatus.textContent = "Full registry unavailable. Only limited California results are available. Retry by reloading, or consult your board directly.";
   }
 }
 
