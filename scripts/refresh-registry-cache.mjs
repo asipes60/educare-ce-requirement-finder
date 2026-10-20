@@ -75,5 +75,5 @@ if (cache.records.length !== expectedCount) {
 
 const outputPath = join(root, "public", "requirements.json");
 await mkdir(dirname(outputPath), { recursive: true });
-await writeFile(outputPath, `${JSON.stringify(cache, null, 2)}\n`, "utf8");
+await writeFile(outputPath, `${JSON.stringify(cache)}\n`, "utf8");
 console.log(`Wrote ${cache.records.length} public registry records to ${outputPath}`);
