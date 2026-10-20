@@ -3,7 +3,7 @@ import {
   getLicenseOptions,
   getStateOptions,
   lookupRequirement,
-} from "./ce-finder.mjs?v=20261020-2";
+} from "./ce-finder.mjs?v=20261020-3";
 
 const stateSelect = document.querySelector("#state");
 const loadStatus = document.querySelector("#load-status");
@@ -162,7 +162,19 @@ licenseSelect.value = "lpc-lpcc-lmhc";
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  renderResult(lookupCurrentRequirement());
+  const result = lookupCurrentRequirement();
+  renderResult(result);
+  reportInteraction({event:"ce_finder_results_viewed",status:result.status,match_count:result.courseMatches.length});
+});
+
+function reportInteraction(properties) {
+  if (window.parent !== window) window.parent.postMessage({type:"educare-ce-finder:analytics",...properties},"https://educarecomplete.com");
+}
+resultRegion.addEventListener("click", (event) => {
+  const link=event.target.closest(".course-card a");
+  if (!link) return;
+  const url=new URL(link.href);
+  if (url.origin === "https://educarecomplete.com" && url.pathname.startsWith("/course/")) reportInteraction({event:"ce_finder_course_clicked",course_path:url.pathname});
 });
 
 renderResult(lookupRequirement("CA", "lpc-lpcc-lmhc"));
