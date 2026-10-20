@@ -1,0 +1,391 @@
+{
+  "warning": "Unverified generated research candidates. Not used for matching without separate official-source review.",
+  "success": true,
+  "status": "completed",
+  "data": [
+    {
+      "stateCode": "AL",
+      "licenseKey": "LPC",
+      "providerPathway": "ABEC’s official CE policy (linked from its Continuing Education page) recognizes CE from providers/organizations approved by ABEC-recognized credentialing bodies; NBCC Approved Continuing Education Provider (ACEP) is a qualifying provider pathway for general counseling CE, not approval of a named course. The provider/course must still satisfy the policy’s subject, instructor and documentation requirements.",
+      "asyncRule": "Conditional: self-contained/distance learning is accepted only within the policy’s stated limit; the official page does not make all asynchronous hours generally interchangeable with live hours.",
+      "limits": "40 hours per 24-month renewal (including required ethics/diagnosis content); no more than 10 hours may be self-contained/distance learning (as stated in the official CE materials). Certificate/attendance documentation must identify title, provider, instructor, date and hours.",
+      "sourceUrls": [
+        "https://abec.alabama.gov/forms-and-applications/continuing-education/",
+        "https://admincode.legislature.state.al.us/administrative-code/536-X-6-.01"
+      ],
+      "passage": "ABEC Continuing Education FAQ: “ABEC no longer approves individual continuing education courses” and directs licensees to its broader CE Policy. Alabama Administrative Code 536-X-6-.01(4): acceptable CE includes “NBCC, pre-approved distance learning courses”; documentation must include “name of sponsoring organization…title/brief description, principal instructor, dates, and number of hours claimed.”",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "AL",
+      "licenseKey": "LMFT",
+      "providerPathway": "NBCC-approved courses are expressly listed as acceptable general CE/CEU activities; no separate Alabama registration of an NBCC provider is stated. The course must be relevant and documented, and the distance-learning provision specifically describes NBCC pre-approved interactive courses.",
+      "asyncRule": "Conditional and generally synchronous: 536-X-6-.01(4)(i) permits NBCC pre-approved distance learning (web lectures, bulletin boards, student interaction, email/TV/video), but expressly says “Distance learning must be synchronous.” Thus ordinary self-paced asynchronous home study is not supported by this rule.",
+      "limits": "LMFT: 40 contact hours each 24 months; at least 10 clinical MFT workshop, 6 diagnosis/treatment, and 6 professional issues/ethics. Independent study max 10 hours. Distance learning is an alternative and does not replace face-to-face clinical supervision. Completion statement must include sponsoring organization, location, title/description, principal instructor, dates and hours; retain two years.",
+      "sourceUrls": [
+        "https://admincode.legislature.state.al.us/administrative-code/536-X-6-.01"
+      ],
+      "passage": "536-X-6-.01(3): “minimum of forty (40) contact hours.” 536-X-6-.01(4)(c): “NBCC-approved courses.” 536-X-6-.01(4)(i): “AAMFT and subsidiary organization, or NBCC, pre-approved distance learning courses” and “Distance learning must be synchronous.” 536-X-6-.01(5) specifies provider, instructor, dates, hours and content/attendance verification.",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "AL",
+      "licenseKey": "LCSW",
+      "providerPathway": "The Alabama social-work rule does not identify NBCC ACEP as a provider pathway. It lists academic courses, Board-approved workshops/conferences and agency staff development, and permits other activities only through the rule’s approval/documentation mechanisms; therefore NBCC-only provider status is not shown to qualify.",
+      "asyncRule": "Asynchronous/self-directed learning is accepted only as a self-directed learning project, subject to Board approval before expiration; it is not an unrestricted NBCC-provider pathway.",
+      "limits": "LCSW renewal requires 30 contact hours per 2 years, including 10 live classroom hours, 3 ethics and 3 clinical. Self-directed learning is capped at 20 contact hours. One contact hour is a 60-minute organized learning experience; CEU = 10 contact hours.",
+      "sourceUrls": [
+        "https://socialwork.alabama.gov/wp-content/uploads/2022/08/850-X-8CE.pdf",
+        "https://socialwork.alabama.gov/licensees/frequently-asked-questions/"
+      ],
+      "passage": "850-X-8-.(3)-(4): “one clock hour means a sixty minute clock hour”; LCSW requirement is “thirty (30) contact hours…10 hours must be a live classroom event…3 hours in ethics and 3 hours in clinical.” 850-X-8-(6)(g): “Self-directed learning project (maximum twenty contact hours).” 850-X-8-(7) requires verification of “content, certification, and attendance.”",
+      "status": "unsupported"
+    },
+    {
+      "stateCode": "AK",
+      "licenseKey": "LPC",
+      "providerPathway": "Alaska 12 AAC 62.320 lists approved organizations/activities. NBCC is listed as an approved continuing-education organization in 12 AAC 62.320 (the Board’s official FAQ directs licensees to that regulation); no additional Alaska provider registration is stated. Content must meet the regulation’s approved-organization/activity standards.",
+      "asyncRule": "Accepted, but capped by the live/synchronous floor: at least 20 of the required hours must be synchronous courses, seminars or workshops; remaining hours may be asynchronous if otherwise approved under 12 AAC 62.320.",
+      "limits": "40 hours for a normal subsequent biennial renewal (20/30/40 depending on first renewal tenure); at least 3 ethics, 3 suicidality and 3 cultural competency; minimum 20 synchronous hours. Provider/course records and certificates are required for renewal/audit.",
+      "sourceUrls": [
+        "https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/ProfessionalCounselors/FrequentlyAskedQuestions",
+        "https://www.commerce.alaska.gov/web/Portals/5/pub/CounselorStatutes.pdf"
+      ],
+      "passage": "12 AAC 62.310(d), reproduced in the Board FAQ: “A minimum of 20 hours…must be earned through attendance and completion of synchronous courses, seminars, and workshops.” FAQ directs readers to “12 AAC 62.320(A) - (Q)…to find approved continuing Education organizations.”",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "AK",
+      "licenseKey": "LMFT",
+      "providerPathway": "Unresolved from the official sources located: the Alaska marital and family therapist board’s current continuing-education/provider-approval rule was not retrievable, so NBCC ACEP qualification and any provider-registration requirement cannot be confirmed.",
+      "asyncRule": "Unresolved: no current official Alaska LMFT rule establishing whether asynchronous online/home study is accepted or how it is measured was located.",
+      "limits": "Unresolved: no current official source located establishing Alaska LMFT renewal hours, synchronous minimum, asynchronous cap or hour calculation. Do not infer counselor or social-worker rules for LMFT.",
+      "sourceUrls": [
+        "https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/MaritalandFamilyTherapists"
+      ],
+      "passage": "Official-source research unresolved: the current Alaska Marital and Family Therapists licensing page/rules were not available in the retrieved materials; consequently provider pathway, delivery rule and limits remain unverified as of the requested date.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "AK",
+      "licenseKey": "LCSW",
+      "providerPathway": "NBCC ACEP is not identified as an approved social-work provider pathway. Alaska 12 AAC 18.220 accepts specified activities (including CSWE-accredited programs) and other courses only if specifically preapproved by the Board (maximum 15 hours); an NBCC provider therefore does not qualify merely by NBCC status.",
+      "asyncRule": "Asynchronous programs are expressly permitted for the hours above the live minimum. At least 10 hours must be live, live-online or synchronous; remaining hours may include an asynchronous program.",
+      "limits": "45 hours each biennium (21 hours if licensed fewer than 12 months on first renewal); required subject minimums include substance abuse 6, cross-cultural 6, ethics 3, teletherapy 3 and suicide 3. No more than 12 CE hours in one day. Other nonlisted courses are capped at 15 hours and require specific Board preapproval.",
+      "sourceUrls": [
+        "https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/SocialWorkExaminers/ContinuingEducationCourses"
+      ],
+      "passage": "12 AAC 18.210(d): “at least 10 contact hours…live, live online, or synchronous training courses”; remaining hours may be obtained through “an asynchronous program,” defined as “non-real-time transmission of instruction.” 12 AAC 18.220(a), (b)(7): CE must contribute directly to competency; other courses must be “specifically preapproved by the board,” up to 15 hours. 12 AAC 18.210(e): “may not earn more than 12 contact hours…in one day.”",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "AZ",
+      "licenseKey": "LPC",
+      "providerPathway": "Arizona BBHE does not pre-approve CE. A program must be behavioral-health CE related to scope and maintain/improve skill and competency; the official CE unit does not identify NBCC-approved providers as a separate qualifying provider category, so NBCC status alone is not established as sufficient.",
+      "asyncRule": "The official BBHE CE unit/rule excerpt reviewed does not state whether asynchronous online or home-study delivery is accepted.",
+      "limits": "30 clock hours per license period; at least 3 hours must cover behavioral-health ethics/mental-health law and cultural considerations in psychotherapy, plus the 3-hour Arizona Statutes/Regulations Tutorial. No asynchronous cap was located in the official material reviewed.",
+      "sourceUrls": [
+        "https://bbhe.az.gov/sites/default/files/2025-11/Continuing%20Education%20Unit%20Page%20%281%29_0.pdf",
+        "https://bbhe.az.gov/license-renewal"
+      ],
+      "passage": "BBHE CE Unit (R4-6-802): licensee shall complete ‘30 clock hours’; CE ‘must relate to the scope of practice and maintain or improve the skill and competency’; ‘The Board does not pre-approve continuing education.’ The reviewed official text does not mention NBCC providers or asynchronous/home-study credit.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "AZ",
+      "licenseKey": "LMFT",
+      "providerPathway": "Same BBHE behavioral-health pathway: no provider preapproval; content must relate to scope and maintain/improve competence. The official material reviewed does not establish NBCC approval as an independent provider qualification.",
+      "asyncRule": "The official BBHE CE unit/rule excerpt reviewed does not state whether asynchronous online or home-study delivery is accepted.",
+      "limits": "30 clock hours per license period; at least 3 hours in behavioral-health ethics/mental-health law and cultural considerations in psychotherapy, plus the 3-hour Arizona Statutes/Regulations Tutorial. No asynchronous cap was located.",
+      "sourceUrls": [
+        "https://bbhe.az.gov/sites/default/files/2025-11/Continuing%20Education%20Unit%20Page%20%281%29_0.pdf",
+        "https://bbhe.az.gov/license-renewal"
+      ],
+      "passage": "BBHE CE Unit (R4-6-802): applies expressly to ‘LBSW, LMSW, LCSW, LAC, LPC, LAMFT, LMFT...’; requires ‘30 clock hours’; Board ‘does not pre-approve continuing education’; content must relate to scope and maintain/improve skill and competency. No NBCC or asynchronous provision appears in reviewed official text.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "AZ",
+      "licenseKey": "LCSW",
+      "providerPathway": "Same BBHE pathway: provider preapproval is not required, but CE must be behavioral-health content within scope that maintains or improves competence. NBCC-provider qualification is not separately identified in the official CE material reviewed.",
+      "asyncRule": "The official BBHE CE unit/rule excerpt reviewed does not state whether asynchronous online or home-study delivery is accepted.",
+      "limits": "30 clock hours per license period; 3 hours in behavioral-health ethics/mental-health law and cultural considerations in psychotherapy, plus the 3-hour Arizona Statutes/Regulations Tutorial. No asynchronous cap located.",
+      "sourceUrls": [
+        "https://bbhe.az.gov/sites/default/files/2025-11/Continuing%20Education%20Unit%20Page%20%281%29_0.pdf",
+        "https://bbhe.az.gov/license-renewal"
+      ],
+      "passage": "BBHE CE Unit (R4-6-802): expressly includes ‘LCSW’; requires ‘30 clock hours’; ‘The Board does not pre-approve continuing education’; and requires scope/competency relevance. The reviewed official source does not address NBCC providers or asynchronous/home-study delivery.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "AR",
+      "licenseKey": "LPC",
+      "providerPathway": "Arkansas counseling rules accept workshops by a ‘qualified professional from state and/or nationally recognized training programs’; they do not expressly say an NBCC-approved CE provider qualifies. Provider pre-registration is not required by the cited section; licensee must retain documentation and demonstrate professional benefit/content relevance.",
+      "asyncRule": "The current 17 CAR §75-702 text reviewed contains no express asynchronous/home-study rule or hour cap; therefore acceptance is unresolved.",
+      "limits": "24 clock hours in the 24 months before renewal, including at least 3 ethics hours; remaining hours must be counseling-related and support statement of intent. No async cap stated.",
+      "sourceUrls": [
+        "https://healthy.arkansas.gov/wp-content/uploads/ARBOEC-Rule-Rev.-July-2026.pdf"
+      ],
+      "passage": "17 CAR §75-702(a): ‘minimum of twenty-four (24) clock hours’ and ‘minimum of three (3) clock hours’ ethics. §75-702(e)(1)(A): workshops ‘provided by a qualified professional from state and/or nationally recognized training programs.’ The reviewed section does not mention NBCC provider approval or asynchronous delivery.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "AR",
+      "licenseKey": "LMFT",
+      "providerPathway": "The Arkansas counseling board rule expressly covers LAMFTs and LMFTs and uses the same qualified-professional/nationally-recognized-training pathway. It does not expressly equate NBCC-approved provider status with qualification, and no provider registration requirement appears in the cited CE section.",
+      "asyncRule": "No express asynchronous online/home-study acceptance or cap appears in current 17 CAR §75-702 reviewed.",
+      "limits": "24 clock hours per 24 months, including 3 ethics hours; remaining hours must be counseling-related and support statement of intent. No async calculation/cap stated.",
+      "sourceUrls": [
+        "https://healthy.arkansas.gov/wp-content/uploads/ARBOEC-Rule-Rev.-July-2026.pdf"
+      ],
+      "passage": "17 CAR §75-702(b) identifies ‘LAMFTs, and LMFTs’; §75-702(a)(1)-(3) sets 24 hours, 3 ethics, and counseling-in-nature remainder; §75-702(e)(1)(A) requires a qualified professional/nationally recognized training program. NBCC and asynchronous delivery are not specified.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "AR",
+      "licenseKey": "LCSW",
+      "providerPathway": "Arkansas does not pre-approve social-work CE workshops. An NBCC-approved provider is not named as an automatic pathway; a course can qualify when its content is formal SWCE directed to developing/enhancing social-work knowledge and service skills and the licensee can document applicability. No extra provider registration is required by the cited rule.",
+      "asyncRule": "Independent home-study/online courses are accepted when they provide qualifying SWCE; maximum 15 clock hours per two-year period. Live interactive webinars count as face-to-face; audited licensees must document that they were live and interactive.",
+      "limits": "30 SWCE hours each two-year period, including at least 3 professional-ethics hours; no more than 15 independent-study/home-study/online hours. One SWCE credit hour is one clock hour (60 minutes); academic credit hour equals 15 clock hours.",
+      "sourceUrls": [
+        "https://healthy.arkansas.gov/wp-content/uploads/Arkansas-Social-Work-Rules.pdf",
+        "https://healthy.arkansas.gov/boards-commissions/boards/social-work-licensing-board/"
+      ],
+      "passage": "Ark. Social Work Rules IX.B.1: ‘thirty (30) credit hours,’ minimum 3 ethics, ‘no more than fifteen (15) hours of independent study.’ IX.C.5 accepts ‘Independent home studies/online courses’ with maximum 15 hours. IX.C.6 requires webinars ‘both live and interactive’ for face-to-face credit. IX.D: ‘The Board does not pre-approve’ workshops; licensee must determine SWCE applicability.",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "CO",
+      "licenseKey": "LPC",
+      "providerPathway": "Colorado LPC CPC materials do not identify NBCC approval as a standalone provider pathway. NBCC-approved education may qualify only if it fits a CPC professional-development activity and the licensee's learning plan; no Colorado provider registration is stated.",
+      "asyncRule": "Independent learning is expressly documented with the state's Independent Learning / Group Learning Form; the official page does not state a separate asynchronous-hour formula or require live delivery.",
+      "limits": "40 PDH per two-year renewal cycle (prorated 1.66 hours/month for mid-cycle initial licensure). No official page located states an asynchronous cap or an hour-conversion rule.",
+      "sourceUrls": [
+        "https://dpo.colorado.gov/ProfessionalCounselor/CPC"
+      ],
+      "passage": "CPC page: ‘Establish learning goals and create a Learning Plan’; ‘Accrue 40 Professional Development Hours (PDH)’; documentation includes ‘Independent Learning / Group Learning Form.’ The page does not mention NBCC, provider approval, instructor standards, or asynchronous caps.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "CO",
+      "licenseKey": "LMFT",
+      "providerPathway": "Colorado's official MFT rule uses qualifying professional-development activities rather than an NBCC-provider approval pathway; NBCC approval is not identified in the located official rule. No extra provider registration is stated.",
+      "asyncRule": "The located official rule/page does not establish a specific asynchronous/home-study category, cap, or hour calculation; unresolved whether an NBCC asynchronous program qualifies as such.",
+      "limits": "Official Colorado CPC materials state 40 PDH per two-year cycle, but the MFT-specific delivery cap/hour calculation and provider requirements were not located in the official sources reviewed.",
+      "sourceUrls": [
+        "https://www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=11182&fileName=4%20CCR%20736-1",
+        "https://dpo.colorado.gov/ProfessionalCounselor/CPC"
+      ],
+      "passage": "4 CCR 736-1 is the official MFT rule; the CPC page states ‘Accrue 40 Professional Development Hours (PDH)’ and retain documentation. Neither located passage names NBCC or sets an asynchronous cap/provider-registration process.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "CO",
+      "licenseKey": "LCSW",
+      "providerPathway": "Colorado CPC materials do not identify NBCC approval as a standalone LCSW provider pathway. An NBCC program is potentially usable only if it is a documented CPC activity aligned with the learning plan; no extra provider registration is stated.",
+      "asyncRule": "The official CPC page provides an Independent Learning / Group Learning Form, but no explicit asynchronous definition, cap, or hours-per-activity calculation.",
+      "limits": "40 PDH per two-year cycle; initial licenses are prorated at 1.66 hours per month. Asynchronous cap and content/instructor/certificate detail are not stated on the located official page.",
+      "sourceUrls": [
+        "https://dpo.colorado.gov/ProfessionalCounselor/CPC"
+      ],
+      "passage": "CPC page: ‘Accrue 40 Professional Development Hours (PDH)’ and retain documentation; it links an ‘Independent Learning / Group Learning Form.’ NBCC provider status and a separate LCSW provider-registration route are not addressed.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "CT",
+      "licenseKey": "LPC",
+      "providerPathway": "NBCC-approved courses expressly qualify for general renewal CE: the Department lists ‘courses offered or approved by the National Board of Certified Counselors’ (NBCC). Connecticut does not preapprove courses/providers; no extra provider registration is stated. Provider certificate is required.",
+      "asyncRule": "Home-study programs may include distance learning and Internet-based educational programs; correspondence/self-instruction is excluded except as a component of a home-study program. No numeric asynchronous cap is stated.",
+      "limits": "15 qualifying hours per one-year registration period; includes at least 2 contact hours veterans/families, 3 ethics hours, and 1 cultural-competency hour. Certificate must be retained 3 years.",
+      "sourceUrls": [
+        "https://portal.ct.gov/dph/practitioner-licensing--investigations/professional-counselor/continuing-education"
+      ],
+      "passage": "CE page, ‘Qualifying Continuing Education’: ‘courses offered or approved by’ NBCC. Delivery section: ‘Home study programs may include distance learning and Internet-based educational programs’; ‘The Department does not approve continuing education courses.’ Documentation section requires a completion certificate retained 3 years.",
+      "status": "supported"
+    },
+    {
+      "stateCode": "CT",
+      "licenseKey": "LMFT",
+      "providerPathway": "NBCC-approved courses expressly qualify when related to maintaining safe and competent marital/family-therapy skills: the official page lists courses ‘accredited, approved or offered by’ NBCC. No extra provider registration is stated; provider completion certificate is required.",
+      "asyncRule": "The official MFT page located does not state a separate asynchronous/home-study cap or hour calculation. It requires qualifying coursework and a certificate; therefore NBCC asynchronous acceptance is conditional on meeting the page's relevance and documentation requirements.",
+      "limits": "15 qualifying hours per one-year registration period; at least 2 contact hours on veterans/families and 1 cultural-competency hour. Certificate retained 3 years. No async numeric cap stated.",
+      "sourceUrls": [
+        "https://portal.ct.gov/dph/practitioner-licensing--investigations/mft/marital-and-family-therapist-continuing-education-requirements"
+      ],
+      "passage": "MFT CE page, ‘Qualifying CE’: NBCC courses qualify ‘provided the coursework is clearly related to maintaining skills necessary for the safe and competent practice of marital and family therapy.’ Documentation section requires a provider certificate retained 3 years.",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "CT",
+      "licenseKey": "LCSW",
+      "providerPathway": "The official social-work page requires CE related to social-work practice but does not list NBCC as an approving organization/provider pathway. The Department says it does not review or approve courses; provider must meet the page's requirements. No extra provider registration is stated.",
+      "asyncRule": "Asynchronous online/distance/home study is expressly accepted up to 10 hours; at least 5 hours must be in-person or synchronous online with live interaction. Asynchronous means no simultaneous instructor/learner interaction and content made available for later consumption.",
+      "limits": "15 hours per 12-month registration period; maximum 10 asynchronous/distance/home-study hours and minimum 5 in-person/synchronous. Also at least 2 veterans-related hours and 1 cultural-competency hour; certificate retained 3 years.",
+      "sourceUrls": [
+        "https://portal.ct.gov/dph/practitioner-licensing--investigations/socialworker/continuing-education-requirements"
+      ],
+      "passage": "Social-work CE page: ‘Not less than five hours’ in-person/synchronous and ‘not more than ten hours’ asynchronous/distance/home study; it defines asynchronous as no real-time interaction. It states, ‘the Department does not review or approve continuing education courses’ and requires a completion certificate retained 3 years.",
+      "status": "unsupported"
+    },
+    {
+      "stateCode": "DE",
+      "licenseKey": "LPCMH",
+      "providerPathway": "NBCC-approved CE is expressly acceptable: CE approved by NBCC is accepted regardless of course content and need not be Board-approved; no separate Delaware provider registration is stated.",
+      "asyncRule": "No blanket asynchronous/home-study rule or cap is stated in §12.2; webinars and interactive courses are examples of acceptable activities, so a purely asynchronous course is not expressly resolved.",
+      "limits": "40 hours per biennium, including 3 ethics and 3 cultural inclusion/equity/diversity; attendance certificate signed by presenter/sponsor required on audit; content documentation may be required for courses not clearly competence-oriented.",
+      "sourceUrls": [
+        "https://regulations.delaware.gov/AdminCode/title24/3000.shtml"
+      ],
+      "passage": "24 DE Admin. Code 3000 §§12.2.1, 12.2.2.1: \"CE hours approved by ... NBCC ... are acceptable, regardless of course content, and do not need to be approved by the Board.\" §12.2.2.2.1 requires agenda/syllabus or other content documentation; §12.2.4 requires a certificate signed by presenter or sponsoring official.",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "DE",
+      "licenseKey": "LMFT",
+      "providerPathway": "NBCC-approved CE is expressly included among acceptable national-organization-approved CE (alongside AAMFT/IFTA); no separate Delaware provider registration is stated.",
+      "asyncRule": "The rule names interactive courses, workshops, seminars and webinars, but does not expressly address asynchronous/home-study delivery or impose an asynchronous cap.",
+      "limits": "40 hours per biennium, including 3 ethics and 3 cultural inclusion/equity/diversity; certificate and documentation requirements apply on audit.",
+      "sourceUrls": [
+        "https://regulations.delaware.gov/AdminCode/title24/3000.shtml"
+      ],
+      "passage": "24 DE Admin. Code 3000 §§12.2.1, 12.2.2.1-.2.2.1: NBCC-approved hours are acceptable regardless of content; activities maintaining competence are acceptable without Board review; §12.2.2.2.1 requires syllabus/agenda when purpose is unclear.",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "DE",
+      "licenseKey": "LCSW",
+      "providerPathway": "NBCC is not listed in the social-work approved-provider pathway. Automatic acceptance is limited to ASWB, NASW, CSWA and APA approved providers; other courses can qualify if clinical content and qualified instructor criteria are met. No separate provider registration; Board does not pre-approve ordinary courses.",
+      "asyncRule": "Internet courses are expressly acceptable; independent study must have a final exam or paper. Self-directed activity is capped at 10 CE per renewal period, with activity-specific caps in §7.2.6.4.",
+      "limits": "40 hours per biennium (6 ethics, 1 mandatory reporting); 10-hour self-directed maximum; one CE hour means 50 minutes; no carryover.",
+      "sourceUrls": [
+        "https://regulations.delaware.gov/AdminCode/title24/3900.shtml"
+      ],
+      "passage": "24 DE Admin. Code 3900 §§7.2.1, 7.2.3-.2.5.1, 7.1.3-.1.6: \"televised and internet courses\" and independent study with final exam/paper are included; Board will not pre-approve; approved-provider list omits NBCC; other courses must improve clinical skills and be taught by specialized graduate-trained or sufficiently experienced persons.",
+      "status": "unsupported"
+    },
+    {
+      "stateCode": "FL",
+      "licenseKey": "LMHC",
+      "providerPathway": "Florida’s operative rule page identifies §64B4-6.004 (provider approval) and §64B4-6.002 (approved courses), but the retrieved official page did not expose the current operative text needed to verify whether NBCC approval alone qualifies or whether a provider must separately register; unresolved.",
+      "asyncRule": "Unresolved from the official rule text retrieved: §64B4-6.002 and §64B4-6.004 are the relevant course/provider sections, but current delivery/cap language was not exposed.",
+      "limits": "Unresolved; profession renewal page confirms documented CE is required but does not state the delivery caps/provider pathway.",
+      "sourceUrls": [
+        "https://flrules.org/gateway/RuleNo.asp?title=LICENSE%20RENEWAL,%20CONTINUING%20EDUCATION%20CREDIT&ID=64B4-6.002",
+        "https://flrules.org/gateway/RuleNo.asp?title=LICENSE%20RENEWAL,%20CONTINUING%20EDUCATION%20CREDIT&ID=64B4-6.004",
+        "https://floridasmentalhealthprofessions.gov/licensed-mental-health-counselor-renewal/"
+      ],
+      "passage": "Official Florida rule index identifies §64B4-6.002 as \"Approved Courses for Continuing Education\" and §64B4-6.004 as \"Approval of Continuing Education Providers\"; the Board renewal page requires documented satisfaction of CE. Current operative provider/delivery provisions remain unresolved.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "FL",
+      "licenseKey": "LMFT",
+      "providerPathway": "Unresolved: official Florida §64B4-6.002/§64B4-6.004 pages identify the governing course/provider rules, but retrieved content did not provide current operative NBCC pathway or separate-registration requirements.",
+      "asyncRule": "Unresolved; current official delivery and asynchronous-hour provisions were not exposed in the retrieved rule text.",
+      "limits": "Unresolved; cannot safely infer profession-specific caps from the general renewal webpage.",
+      "sourceUrls": [
+        "https://flrules.org/gateway/RuleNo.asp?title=LICENSE%20RENEWAL,%20CONTINUING%20EDUCATION%20CREDIT&ID=64B4-6.002",
+        "https://flrules.org/gateway/RuleNo.asp?title=LICENSE%20RENEWAL,%20CONTINUING%20EDUCATION%20CREDIT&ID=64B4-6.004",
+        "https://floridasmentalhealthprofessions.gov/continuing-education-ce/"
+      ],
+      "passage": "Florida’s official Chapter 64B4-6 index labels §64B4-6.002 \"Approved Courses\" and §64B4-6.004 \"Approval of Continuing Education Providers\". The current operative text necessary to answer NBCC, asynchronous delivery, and caps was not available in the retrieved official page; unresolved.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "FL",
+      "licenseKey": "LCSW",
+      "providerPathway": "Unresolved: §64B4-6.002 and §64B4-6.004 are the official course/provider rules, but the retrieved official text did not establish whether NBCC-approved providers qualify for general LCSW renewal credit or require Florida provider approval.",
+      "asyncRule": "Unresolved; official retrieved material does not expose current online/home-study rules or calculations.",
+      "limits": "Unresolved; profession-specific limits require the operative rule text rather than the general CE webpage.",
+      "sourceUrls": [
+        "https://flrules.org/gateway/RuleNo.asp?title=LICENSE%20RENEWAL,%20CONTINUING%20EDUCATION%20CREDIT&ID=64B4-6.002",
+        "https://flrules.org/gateway/RuleNo.asp?title=LICENSE%20RENEWAL,%20CONTINUING%20EDUCATION%20CREDIT&ID=64B4-6.004",
+        "https://floridasmentalhealthprofessions.gov/licensed-clinical-social-worker/"
+      ],
+      "passage": "Official Florida sources identify Chapter 64B4 and the course/provider rules, while the LCSW page links Chapter 64B4. The current operative provisions on NBCC provider status, asynchronous delivery, certificates/instructors, and caps were not exposed; unresolved.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "GA",
+      "licenseKey": "LPC/Professional Counselor",
+      "providerPathway": "Conditional: Rule 135-9-.01(2)(e) permits professional-counseling core activities sponsored, co-sponsored, or approved by a professional association in the specialty. An NBCC-approved provider is not expressly named and the Board says it does not approve individual providers; NBCC approval therefore qualifies only if the provider/activity fits the rule's specialty-association pathway (not merely because it has NBCC approval).",
+      "asyncRule": "Asynchronous means an online course or recording accessed on one's own schedule (135-9-.01(1)(b)); it may be used for core hours if sponsored/co-sponsored/approved by a qualifying professional association (135-9-.01(2)(e)).",
+      "limits": "35 hours per 2-year cycle; 5 ethics hours must be synchronous; at least 15 of the remaining 30 are core and no more than 15 related; no more than 10 hours asynchronous; independent study max 5 and cannot satisfy ethics or core. Academic semester hour = 15 CE hours and quarter hour = 10, up to 20 (135-9-.01(2)(b)-(g)). Provider must certify clock hours and certificate should identify synchronous/asynchronous; audit documentation must show certificate/provider verification (135-9-.01(2)(h), (4)(c)).",
+      "sourceUrls": [
+        "https://rules.sos.ga.gov/gac/135-9-.01",
+        "https://sos.ga.gov/page/georgia-board-professional-counselors-social-workers-and-marriage-therapists-faq"
+      ],
+      "passage": "Rule 135-9-.01(2)(e): core hours may be from activities ‘sponsored, co-sponsored, or approved’ by a professional association in the specialty. Rule 135-9-.01(1)(b): asynchronous is an online course/recording accessed on one's own schedule. Rule 135-9-.01(2)(h): sponsor ‘shall certify’ clock hours and certificate should state synchronous/asynchronous. FAQ: ‘The Board does not approve individual continuing education providers.’",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "GA",
+      "licenseKey": "LMFT/Marriage and Family Therapist",
+      "providerPathway": "Conditional: Rule 135-9-.01 allows MFT core credit through a professional association in the MFT specialty, or related credit through specified associations/boards. NBCC approval alone is not an express MFT-provider approval and does not establish MFT specialty content; Board does not approve individual providers.",
+      "asyncRule": "Asynchronous online/recorded activity is recognized (135-9-.01(1)(b)) and can be core/related only through the applicable sponsor pathway; ethics must be synchronous.",
+      "limits": "35 hours every 2 years; 5 synchronous ethics; 15 core minimum and 15 related maximum of remaining 30; asynchronous maximum 10; independent study max 5 and not ethics/core; graduate semester/quarter conversions 15/10 hours, coursework cap 20. Certificate should state clock hours and synchronous/asynchronous (135-9-.01(2)(b)-(h)).",
+      "sourceUrls": [
+        "https://rules.sos.ga.gov/gac/135-9-.01",
+        "https://sos.ga.gov/page/georgia-board-professional-counselors-social-workers-and-marriage-therapists-faq"
+      ],
+      "passage": "Rule 135-9-.01(1)(e): core means content in the specialty held. Rule 135-9-.01(2)(e)(1): core may be sponsored/co-sponsored/approved by a professional association ‘in the specialty.’ Rule 135-9-.01(2)(h): sponsor certifies clock hours and certificate should identify delivery mode. FAQ says Board does not approve individual providers.",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "GA",
+      "licenseKey": "LCSW/Clinical Social Worker",
+      "providerPathway": "Conditional: A social-work professional association may sponsor/co-sponsor/approve core activities under Rule 135-9-.01(2)(e); NBCC-approved-provider status is not expressly listed as a standalone pathway and does not itself prove social-work specialty approval. The Board does not preapprove individual providers.",
+      "asyncRule": "Online courses/recordings accessed on one's own schedule are asynchronous; up to 10 CE hours per biennium may be asynchronous, subject to the content/provider rules. Ethics is synchronous only.",
+      "limits": "35 hours per 2-year cycle; 5 synchronous ethics; minimum 15 core and maximum 15 related among remaining 30; asynchronous max 10; independent study max 5 and cannot be ethics/core. Sponsor certificate must certify clock hours and should state synchronous/asynchronous; retain audit proof (135-9-.01(2)(b)-(h), (4)(a),(c)).",
+      "sourceUrls": [
+        "https://rules.sos.ga.gov/gac/135-9-.01",
+        "https://sos.ga.gov/page/georgia-board-professional-counselors-social-workers-and-marriage-therapists-faq"
+      ],
+      "passage": "Rule 135-9-.01(2)(e): core activities must be sponsored/co-sponsored/approved by a professional association in the specialty. Rule 135-9-.01(2)(h): sponsor shall certify clock hours; certificate should include delivery mode. Rule 135-9-.01(2)(d): asynchronous maximum 10. Board FAQ: it does not approve individual providers.",
+      "status": "conditional"
+    },
+    {
+      "stateCode": "HI",
+      "licenseKey": "LMHC/Mental Health Counselor",
+      "providerPathway": "No general renewal CE requirement is stated by the official Mental Health Counselor Program renewal page; consequently an NBCC-approved provider does not create renewal credit under the identified official source.",
+      "asyncRule": "Not applicable for renewal CE: official program page does not impose continuing education. No official asynchronous-credit rule identified.",
+      "limits": "No renewal CE hours, delivery cap, hour conversion, or provider-registration requirement identified on the official Mental Health Counselor Program page.",
+      "sourceUrls": [
+        "https://cca.hawaii.gov/pvl/programs/mental/"
+      ],
+      "passage": "Official PVL Mental Health Counselor Program page, License Continuation Info section, describes triennial renewal but does not state a CE requirement. No official provider-approval or online/home-study provision was identified there.",
+      "status": "supported"
+    },
+    {
+      "stateCode": "HI",
+      "licenseKey": "LMFT/Marriage and Family Therapist",
+      "providerPathway": "Unresolved: no official Hawaii administrative-code or board/program CE provision for LMFT renewal was located in the official sources searched; therefore NBCC-provider acceptance cannot be determined.",
+      "asyncRule": "Unresolved: no official LMFT rule establishing asynchronous/home-study acceptance or a cap was located.",
+      "limits": "Unresolved: no official LMFT CE total, ethics requirement, hour conversion, or provider-registration rule located.",
+      "sourceUrls": [
+        "https://cca.hawaii.gov/pvl/"
+      ],
+      "passage": "The official PVL landing page identifies regulated programs but the searched official materials did not yield an LMFT continuing-education/provider rule. Determination remains unresolved rather than treating absence of a search hit as nonacceptance.",
+      "status": "unresolved"
+    },
+    {
+      "stateCode": "HI",
+      "licenseKey": "LCSW/Clinical Social Worker",
+      "providerPathway": "Unsupported for the stated NBCC-provider pathway: the official Social Worker Program page requires CE courses approved by NASW, NASW chapters, or ASWB; NBCC is not among the listed approvers. No extra provider registration is stated.",
+      "asyncRule": "The official page does not state whether online/home-study is accepted, nor an asynchronous cap or hour calculation; unresolved on delivery mechanics.",
+      "limits": "Active social workers must complete at least 45 CE hours in the 3-year period preceding renewal, including 3 ethics hours; first-time licensees are exempt at first renewal. Licensees retain records and may be randomly audited (HRS §467E-11 referenced by the page).",
+      "sourceUrls": [
+        "https://cca.hawaii.gov/pvl/programs/socialworker/"
+      ],
+      "passage": "Official Social Worker Program, License Continuation Info: ‘at least 45 hours’ and ‘3 credit hours’ ethics; ‘All CE courses must be approved by the National Association of Social Workers, the National Association of Social Workers Chapters, or the Association of Social Work Boards’; courses must be completed in the preceding three-year period pursuant to HRS §467E-11.",
+      "status": "unsupported"
+    }
+  ],
+  "creditsUsed": 0,
+  "expiresAt": "2026-10-21T09:34:20.416Z",
+  "model": "spark-2",
+  "mode": "extract",
+  "threadId": "01a158a9-6b29-736e-a9fd-ccbf6527df80",
+  "threadTurn": 1,
+  "message": "Collected 30 profession/state rows across the 10 requested states, using official board or administrative-code sources. Rows distinguish supported, conditional, unsupported, and unresolved determinations; unresolved entries reflect missing or non-exposed operative official text rather than inference."
+}

@@ -11,6 +11,7 @@ const copies = [
   ["assets", "assets"],
   ["public/requirements.json", "api/requirements"],
   ["public/requirements.json", "requirements.json"],
+  ["public/requirements.json", "public/requirements.json"],
   ["public/screenshot.jpeg", "screenshot.jpeg"],
 ];
 

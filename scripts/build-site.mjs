@@ -21,6 +21,7 @@ const sourceFiles = [
   "src/app.mjs",
   "src/airtable-registry.mjs",
   "src/ce-finder.mjs",
+  "src/course-eligibility.mjs",
   "src/data.mjs",
   "src/styles.css",
   "assets/educare-logo.png",

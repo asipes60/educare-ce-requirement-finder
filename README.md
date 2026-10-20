@@ -91,3 +91,40 @@ Core fields:
 | Reviewer Notes | `fldkjKlvK84JpjqEA` |
 
 Only records with `Verification Status = Verified` should be eligible for public display.
+
+## Recommendation review (2026-10-20)
+
+Course availability and advertised hours were checked against the live EduCare catalog.
+State/profession provider and delivery-method evidence is recorded separately in
+`src/course-eligibility.mjs`; see `docs/research/course-eligibility-review.md` for the
+complete 150-row review queue. Only verified evidence rows yield recommendations. Provider approval pathways are
+tracked separately under `providerAcceptance`; recognition alone never enables a
+course. See `docs/research/provider-acceptance-review.md` for the current findings.
+California includes four available courses. Reviewed non-California combinations
+include only the three general courses; California Minor Consent remains excluded.
+This review does not establish mandatory-topic credit or independently audit
+instructional hours. Coming-soon BACB courses are excluded. Review availability
+before each release.
+
+Matching is derived at lookup from the reviewed catalog in `src/data.mjs` and the state/profession evidence gates, not
+from private Airtable IDs. A registry refresh therefore cannot silently erase or
+expand eligibility. The browser loads `public/requirements.json` using a module-
+relative URL compatible with GitHub Pages subpaths and supported build outputs.
+Requirement review dates are preserved; this change does not reverify the 300
+existing requirement summaries.
+
+## Proposed LearnWorlds copy (not published)
+
+Heading: Find Your Continuing Education Requirements
+
+Select your state and credential to review renewal hours, required topics, and
+official sources. Where eligibility has been verified, results also include
+relevant EduCare courses. Check the review date and confirm requirements with
+your licensing board or certification body before enrolling.
+
+Having trouble loading the Finder? Open the CE Requirement Finder directly.
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/
+Open in a new tab, rel="noopener noreferrer".
+
+Deployment is held for review. Rollback: revert this branch's commit and redeploy
+the preceding version. No Airtable records or live LearnWorlds settings changed.
