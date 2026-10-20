@@ -42,16 +42,11 @@ http://localhost:4173/api/requirements
 
 ## LearnWorlds Embed
 
-Use an iframe embed on the LearnWorlds page after the tool is hosted:
-
-```html
-<iframe
-  src="https://asipes60.github.io/educare-ce-requirement-finder/"
-  title="EduCare CE Requirement Finder"
-  style="width:100%;min-height:900px;border:0;"
-  loading="lazy"
-></iframe>
-```
+Use the complete published markup in `integrations/learnworlds-ce-finder.html`.
+It includes the introduction, direct-open fallback, responsive iframe, and a
+height listener restricted to the GitHub Pages origin and the expected frame.
+The embedded app reports its content height so results fill the page without
+an internal scrollbar. Keep the host listener when replacing the iframe.
 
 ## Data Governance
 
@@ -123,13 +118,13 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-1
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-2-live
 Open in a new tab, rel="noopener noreferrer".
 
 The approved introduction and fallback link are published on the LearnWorlds host
 page. The iframe and direct-open link use the release query above to avoid old
-HTML cached by returning browsers. Entry/dependency modules use the same release
-version in their import URLs. Bump these together when publishing changed scripts.
+HTML cached by returning browsers. Entry/dependency modules use `20261020-2` in their import URLs.
+Update both release versions when publishing changed scripts.
 
 GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static
 runtime to that branch after updating main. The deployed tree includes
@@ -138,3 +133,17 @@ index.html, and assets. Keep the same registry under the existing
 `api/requirements` and root `requirements.json` paths for compatibility.
 Rollback: deploy the preceding static tree to `gh-pages` with a new version query.
 See docs/research/live-deployment-verification-20261020.md for the browser checks.
+
+## Responsive layout verification (October 20, 2026)
+
+Results and loading status share the second desktop grid column; below 760px,
+the form and results use one column. The embed hides its duplicate introduction,
+loads eagerly, and expands to its content height. Host mobile spacing is scoped
+to the Finder section. Course links have a minimum 44px target height.
+
+Live desktop checks confirmed side-by-side results, automatic height adjustment,
+and California, Ohio, and Pennsylvania recommendation behavior. A 390px mobile
+render confirmed readable controls without horizontal clipping. The registry JSON
+was compacted by about 83KB without changing its data; refreshes preserve this.
+All 20 tests and both builds passed. PageSpeed returned HTTP 429, so no new mobile
+performance score or LCP measurement is claimed.
