@@ -3,7 +3,7 @@ import {
   getLicenseOptions,
   getStateOptions,
   lookupRequirement,
-} from "./ce-finder.mjs?v=20261020-4";
+} from "./ce-finder.mjs?v=20261020-6";
 
 const stateSelect = document.querySelector("#state");
 const loadStatus = document.querySelector("#load-status");

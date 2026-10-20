@@ -116,32 +116,40 @@ export const courseEligibility = [
     "stateCode": "AZ",
     "stateName": "Arizona",
     "licenseKey": "lmft",
-    "status": "unresolved",
-    "reviewedAt": null,
+    "status": "conditional",
+    "reviewedAt": "2026-10-20",
     "courseIds": [],
-    "sources": [],
-    "notes": "Provider acceptance, delivery method, and course-specific relevance not yet verified.",
+    "sources": [
+      "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+    ],
+    "notes": "R4-6-802(D) permits relevant behavioral-health education sponsored or approved by qualifying professional organizations. EduCare provider classification, asynchronous course treatment and R4-6-803 certificate documentation remain unverified; no recommendations enabled.",
     "providerAcceptance": {
       "status": "unresolved",
-      "reviewedAt": null,
-      "sources": [],
-      "basis": "A published provider-acceptance pathway has not yet been established in this review."
+      "reviewedAt": "2026-10-20",
+      "sources": [
+        "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+      ],
+      "basis": "The current rule gives broad organization categories, not an explicit EduCare or NBCC ACEP determination. Board renewal and tracker pages returned HTTP 403 during full-text verification."
     }
   },
   {
     "stateCode": "AZ",
     "stateName": "Arizona",
     "licenseKey": "lcsw-lisw",
-    "status": "unresolved",
-    "reviewedAt": null,
+    "status": "conditional",
+    "reviewedAt": "2026-10-20",
     "courseIds": [],
-    "sources": [],
-    "notes": "Provider acceptance, delivery method, and course-specific relevance not yet verified.",
+    "sources": [
+      "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+    ],
+    "notes": "R4-6-802(D) permits relevant behavioral-health education sponsored or approved by qualifying professional organizations. EduCare provider classification, asynchronous course treatment and R4-6-803 certificate documentation remain unverified; no recommendations enabled.",
     "providerAcceptance": {
       "status": "unresolved",
-      "reviewedAt": null,
-      "sources": [],
-      "basis": "A published provider-acceptance pathway has not yet been established in this review."
+      "reviewedAt": "2026-10-20",
+      "sources": [
+        "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+      ],
+      "basis": "The current rule gives broad organization categories, not an explicit EduCare or NBCC ACEP determination. Board renewal and tracker pages returned HTTP 403 during full-text verification."
     }
   },
   {
@@ -343,13 +351,14 @@ export const courseEligibility = [
     "stateCode": "CT",
     "stateName": "Connecticut",
     "licenseKey": "lmft",
-    "status": "conditional",
+    "status": "additional_approval_required",
     "reviewedAt": "2026-10-20",
     "courseIds": [],
     "sources": [
-      "https://portal.ct.gov/en/DPH/Practitioner-Licensing--Investigations/MFT/Marital-and-Family-Therapist-Continuing-Education-Requirements"
+      "https://portal.ct.gov/dph/practitioner-licensing--investigations/mft/marital-and-family-therapist-continuing-education-requirements",
+      "https://eregulations.ct.gov/eRegsPortal/Browse/getDocument?guid=%7BF0A1E155-0200-C090-ADF7-F6B051BFC60C%7D"
     ],
-    "notes": "NBCC is an accepted education pathway; confirm the applicable delivery-method rule before enabling recommendations. Course must relate to MFT practice.",
+    "notes": "NBCC is recognized for MFT-related CE, but RCSA 20-195c-1(6) imposes a separate home-study approval pathway. EduCare asynchronous courses remain excluded until that pathway and documentation are established.",
     "providerAcceptance": {
       "status": "recognized",
       "reviewedAt": "2026-10-20",
@@ -2206,7 +2215,7 @@ export const courseEligibility = [
     "sources": [
       "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/"
     ],
-    "notes": "No provider preapproval. At least half of renewal hours must come from specified provider types. Verify profession-specific rules and EduCare provider-type classification before matching.",
+    "notes": "BHEC permits compliant CE from any provider, but at least half of renewal hours must come from specified provider types. Its FAQ distinguishes certificate-based provider courses from informal self-study. EduCare classification and profession-specific credit limits remain unresolved; no recommendations enabled.",
     "providerAcceptance": {
       "status": "unresolved",
       "reviewedAt": null,
@@ -2224,7 +2233,7 @@ export const courseEligibility = [
     "sources": [
       "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/"
     ],
-    "notes": "No provider preapproval. At least half of renewal hours must come from specified provider types. Verify profession-specific rules and EduCare provider-type classification before matching.",
+    "notes": "BHEC permits compliant CE from any provider, but at least half of renewal hours must come from specified provider types. Its FAQ distinguishes certificate-based provider courses from informal self-study. EduCare classification and profession-specific credit limits remain unresolved; no recommendations enabled.",
     "providerAcceptance": {
       "status": "unresolved",
       "reviewedAt": null,
