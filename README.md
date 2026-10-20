@@ -113,7 +113,7 @@ relative URL compatible with GitHub Pages subpaths and supported build outputs.
 Requirement review dates are preserved; this change does not reverify the 300
 existing requirement summaries.
 
-## Proposed LearnWorlds copy (not published)
+## LearnWorlds copy (published October 20, 2026)
 
 Heading: Find Your Continuing Education Requirements
 
@@ -123,8 +123,18 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-1
 Open in a new tab, rel="noopener noreferrer".
 
-Deployment is held for review. Rollback: revert this branch's commit and redeploy
-the preceding version. No Airtable records or live LearnWorlds settings changed.
+The approved introduction and fallback link are published on the LearnWorlds host
+page. The iframe and direct-open link use the release query above to avoid old
+HTML cached by returning browsers. Entry/dependency modules use the same release
+version in their import URLs. Bump these together when publishing changed scripts.
+
+GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static
+runtime to that branch after updating main. The deployed tree includes
+`public/requirements.json`, `src/course-eligibility.mjs`, the other src modules,
+index.html, and assets. Keep the same registry under the existing
+`api/requirements` and root `requirements.json` paths for compatibility.
+Rollback: deploy the preceding static tree to `gh-pages` with a new version query.
+See docs/research/live-deployment-verification-20261020.md for the browser checks.
