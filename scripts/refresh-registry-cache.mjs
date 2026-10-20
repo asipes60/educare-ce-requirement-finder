@@ -67,7 +67,7 @@ async function fetchAirtableRecords() {
 await loadEnvFile(getArgValue("--env"));
 const records = await fetchAirtableRecords();
 const cache = buildRegistryCache(records);
-const expectedCount = Number(process.env.EXPECTED_RECORD_COUNT ?? 250);
+const expectedCount = Number(process.env.EXPECTED_RECORD_COUNT ?? 300);
 
 if (cache.records.length !== expectedCount) {
   throw new Error(`Expected ${expectedCount} verified records, got ${cache.records.length}.`);

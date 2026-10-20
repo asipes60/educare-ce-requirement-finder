@@ -205,7 +205,7 @@ export const educareCourses = [
     "id": "nbcc-california-minor-consent",
     "title": "Applying Minor Consent Laws in California for School-Based Mental Health Services",
     "creditValue": 1,
-    "creditUnit": "CE hours",
+    "creditUnit": "CE hour",
     "url": "https://educarecomplete.com/course/applying-minor-consent-laws-in-california-for-school-based-mental-health-services",
     "track": "NBCC",
     "status": "available",

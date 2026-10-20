@@ -4,7 +4,25 @@
   if (window.educareAnalyticsBridgeInstalled) return;
   window.educareAnalyticsBridgeInstalled = true;
   var seenPurchases = new Set();
+  // Installation is already gated by LearnWorlds' analytics category. Its native
+  // gtag consent updates also tell an installed bridge when that choice changes.
+  var analyticsAllowed = true;
+  function consentValue(entry) {
+    if (!entry || entry[0] !== 'consent' || (entry[1] !== 'default' && entry[1] !== 'update')) return null;
+    var value = entry[2] && entry[2].analytics_storage;
+    return value === 'granted' ? true : value === 'denied' ? false : null;
+  }
+  function applyConsent(allowed) {
+    analyticsAllowed = allowed;
+    var ph = window.posthog;
+    if (!ph) return;
+    // These SDK methods also stop automatic collection and clear analytics
+    // persistence on withdrawal; guarding only our custom events is insufficient.
+    if (allowed && typeof ph.opt_in_capturing === 'function') ph.opt_in_capturing();
+    if (!allowed && typeof ph.opt_out_capturing === 'function') ph.opt_out_capturing();
+  }
   function capture(name, properties) {
+    if (!analyticsAllowed) return;
     var ph = window.posthog;
     if (!ph || typeof ph.capture !== 'function') return;
     if (typeof ph.has_opted_out_capturing === 'function' && ph.has_opted_out_capturing()) return;
@@ -15,6 +33,9 @@
   }
   var names = {view_item:'course_viewed',add_to_cart:'course_added_to_cart',begin_checkout:'checkout_started',purchase:'purchase_completed',free_trial_subscription:'subscription_trial_started'};
   function consume(entry) {
+    var consent = consentValue(entry);
+    if (consent !== null) {applyConsent(consent);return;}
+    if (!analyticsAllowed) return;
     var name, data;
     if (entry && entry[0] === 'event') {name=entry[1];data=entry[2] || {};}
     else if (entry && typeof entry.event === 'string') {name=entry.event;data=entry.ecommerce || entry;}
@@ -42,7 +63,17 @@
     for(var i=0;i<arguments.length;i++) {try {consume(arguments[i]);} catch (_) {}}
     return result;
   };
-  layer.slice().forEach(function(entry){try {consume(entry);} catch (_) {}});
+  // Only replay events after the latest explicit analytics grant. In particular,
+  // accepting cookies must never backfill activity collected before acceptance.
+  var pending = layer.slice();
+  var consentIndex = -1;
+  for (var j=0;j<pending.length;j++) {
+    if (consentValue(pending[j]) !== null) consentIndex = j;
+  }
+  if (consentIndex >= 0) {
+    applyConsent(consentValue(pending[consentIndex]));
+    if (analyticsAllowed) pending.slice(consentIndex+1).forEach(function(entry){try {consume(entry);} catch (_) {}});
+  }
   window.addEventListener('message',function(event){
     var frame=document.getElementById('educare-ce-finder');
     if (!frame || event.origin !== 'https://asipes60.github.io' || event.source !== frame.contentWindow) return;

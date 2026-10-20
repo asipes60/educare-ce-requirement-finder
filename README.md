@@ -16,9 +16,10 @@ https://asipes60.github.io/educare-ce-requirement-finder/
   - LMFT
   - LCSW / LISW
   - Psychologist
-  - BCBA / BCaBA
+  - BCBA / BCBA-D
+  - BCaBA
 - Shows verified requirement summaries from the cached public Airtable registry.
-- Uses 250 verified records from Growth Hub `CE Requirements`: 50 BACB national certification-maintenance rows and 200 state-board rows across all 50 states.
+- Uses 300 verified records from Growth Hub `CE Requirements`: 100 BACB national certification-maintenance rows (50 BCBA/BCBA-D and 50 BCaBA) and 200 state-board rows across all 50 states.
 - Uses NBCC ACEP No. 8109 only after course-level matching is verified.
 
 ## Run Locally
@@ -60,11 +61,11 @@ The browser receives only public-safe verified fields. Airtable credentials, rev
 
 ## Production Registry Source
 
-Created 2026-06-21 in Airtable Growth Hub. Current public cache refreshed 2026-06-22.
+Created 2026-06-21 in Airtable Growth Hub. Current public cache updated 2026-10-20. Requirement review dates are retained per record.
 
 - Base: `EduCare Growth Hub` (`app0SleLSUfJ1ME03`)
 - Table: `CE Requirements` (`tblKG69LIBl6DIj3S`)
-- Current scope: 250 verified records.
+- Current scope: 300 verified records.
 
 Core fields:
 
@@ -118,12 +119,12 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-3-verified
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-4-verified
 Open in a new tab, rel="noopener noreferrer".
 
 The approved introduction and fallback link are published on the LearnWorlds host
 page. The iframe and direct-open link use the release query above to avoid old
-HTML cached by returning browsers. Entry/dependency modules use `20261020-3` in their import URLs.
+HTML cached by returning browsers. Entry/dependency modules use `20261020-4` in their import URLs.
 Update both release versions when publishing changed scripts.
 
 GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static
@@ -163,8 +164,30 @@ and use a deterministic insert ID. No form text, goal drafts, item names, or
 customer fields are forwarded. Standalone Finder interactions are not tracked.
 
 Live Finder results-view and course-click receipt were verified in PostHog.
-Native purchase/checkout forwarding is tested, but end-to-end receipt remains
-unverified in the administrator session. A live purchase was not submitted.
-Fresh anonymous consent testing, real-phone interactions, GA4 receipt, and a new
-mobile lab speed measurement remain separate validation steps. All 24 tests and
-both builds passed for this release.
+A zero-dollar learner checkout verified native view/cart/checkout/purchase receipt
+and enrollment on October 20. The legacy purchase item-ID mapping was subsequently
+fixed; no historical transaction was resent. Paid-card revenue and a new post-fix
+purchase remain unobserved. GA4 daily report receipt is scheduled for a delayed
+follow-up; these imports cannot establish transaction-level deduplication.
+
+The host now follows LearnWorlds analytics_storage consent updates. Withdrawal
+immediately blocks custom events and calls the SDK opt-out; explicit acceptance
+restores collection. Queued ecommerce activity is replayed only after the latest
+explicit analytics grant, so accepting cookies does not backfill earlier activity.
+A controlled signed-out browser test verified rejection, acceptance, withdrawal
+without a reload, and reacceptance against PostHog event receipts. This was not a
+pristine new browser profile. HTTP, network, and malformed-registry failures are
+covered by application startup tests; forcing an outage in the connected browser
+was blocked because the isolated local test server was unreachable. The direct-open
+fallback and all four course destinations loaded successfully in the browser.
+
+The October 20 catalog check found four available NBCC courses, all represented
+in matching. Coming-soon BACB courses, the HIPAA 2.0 draft, and non-CE resources
+remain excluded. All 150 state/profession evidence gates remain enforced. Existing
+provider pathways for CA, CT, NM, OH, VA, and WA were checked against their official
+sources; no new jurisdiction or mandated-category claim was enabled. Connecticut
+counselor requirements now include the previously omitted 1-hour cultural-competency
+requirement in both Airtable and the cache. Only this requirement review date changed.
+The cache refresh default now expects all 300 records. All 33 tests and both builds
+passed for this release. Real-phone layout checks passed by owner report; a fresh
+mobile laboratory measurement remains outstanding.
