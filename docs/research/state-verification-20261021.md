@@ -68,3 +68,11 @@ Authenticated LearnWorlds administration, read-only inspection October 21:
 Public enrollment pages alone do not establish learner content availability. No draft lessons were published, no learner progress altered and no completion certificate generated during this review. Existing state gates remain unchanged outside the seven reviewed rows. Configured course IDs remain as evidence history; the existing available-course filter now excludes the two Draft catalog entries. California currently yields HIPAA/FERPA plus Minor Consent; the other 11 previously enabled combinations yield HIPAA/FERPA only.
 
 The next evidence needed is actual completion-template fields, EduCare's current NBCC home-study format authorization, and publication/access verification for the held courses. NBCC's [provider guidance](https://www.nbcc.org/resources/ceproviderresources/ceproviderapplicants) and [Provider Policy](https://nbcc.org/assets/ceprovider/nbcc_continuing_education_provider_policy.pdf) distinguish format-specific approval from individual course approval. This state pass is not a fresh independent instructional-hour or full ACEP course audit.
+
+## Release validation
+
+All 37 tests passed; both site and Vercel builds succeeded. Regression cases failed before the corrections. Public cache comparison confirms exactly seven changed requirement records and 293 unchanged records; only the seven intended state gates changed. No whitespace errors.
+
+Published main commit: 4ae9cd35df332fba9063905b56262572d75eec48. Pages runtime: c23886ff7af95a66cf9f95194c94dd9fdb40a585. Tested local and remote source trees match exactly. Both branch updates used expected-head protection and no force. The host iframe and fallback link were saved with release 20261021-1-verified.
+
+Live embedded verification confirmed all seven held selections, corrected October 21 review dates and AZ/NM/TX requirement copy, three California selections with two courses, New Mexico LPC/MFT and Ohio LCSW with one course, and New York LMFT with none. The NM result expanded the host iframe to 1207px at 1120px width, consistent with the existing resize protocol. No incomplete courses or new specialty-credit claims were displayed.
