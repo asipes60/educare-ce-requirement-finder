@@ -1,6 +1,6 @@
 # National matching review
 
-Latest checkpoint October 21, 2026: 30 provider pathways recognized; full gates are 14 verified, 27 conditional, 3 additional-approval-required, 106 unresolved. Seven AZ/TX/NM-social-work requirement records corrected and reviewed. No new course matches. Two courses with Draft required sections excluded globally. See [current verification report](state-verification-20261021.md). Earlier dated pass details below are historical.
+Latest checkpoint October 21, 2026: 30 provider pathways recognized; full gates are 17 verified, 24 conditional, 3 additional-approval-required, 106 unresolved. Seven AZ/TX/NM-social-work requirement records corrected and reviewed. Systems restored after paid section publication. Texas LPC/LMFT/LCSW receive HIPAA/FERPA and Systems within the remaining-half provider allocation. Theories, Arizona and New Mexico social work remain held. See [course-readiness follow-up](course-readiness-followup-20261021.md). Earlier dated pass details below are historical.
 
 Scope: 147 additional state/profession combinations. See src/course-eligibility.mjs
 for source links, reviewed dates, specific course IDs and unresolved gates.

@@ -1,10 +1,10 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {lookupRequirement,createRequirementLookup} from '../src/ce-finder.mjs';
-test('California BBS licenses receive two published general CE courses',()=>{
+test('California BBS licenses receive three published general CE courses',()=>{
  for(const license of ['lpc-lpcc-lmhc','lmft','lcsw-lisw']){
  const matches=lookupRequirement('CA',license).courseMatches;
- assert.equal(matches.length,2);assert.deepEqual(matches.map(x=>x.creditValue),[5,1]);
+ assert.equal(matches.length,3);assert.deepEqual(matches.map(x=>x.creditValue),[5,3,1]);
  assert.ok(matches.every(x=>x.url.startsWith('https://educarecomplete.com/course/')&&x.matchType==='general'));
  }
 });
@@ -17,21 +17,21 @@ test('no unsupported credential or jurisdiction recommendations',()=>{
 test('cached records retain matching without private course IDs',()=>{
  const base=lookupRequirement('CA','lpc-lpcc-lmhc');
  const result=createRequirementLookup([{...base,courseMatches:[]}]).lookupRequirement('CA','lpc-lpcc-lmhc');
- assert.equal(result.courseMatches.length,2);assert.ok(!('courseMatchIds' in result));
+ assert.equal(result.courseMatches.length,3);assert.ok(!('courseMatchIds' in result));
  assert.ok(result.courseMatches.every(x=>x.categoryCredit===null));
 });
 
-test('reviewed Ohio combinations receive only the published nationally relevant course',()=>{
+test('reviewed Ohio combinations receive the published nationally relevant courses',()=>{
  for(const licenseKey of ['lpc-lpcc-lmhc','lmft','lcsw-lisw']){
  const base=lookupRequirement('CA','lpc-lpcc-lmhc');
  const result=createRequirementLookup([{...base,stateCode:'OH',licenseKey}]).lookupRequirement('OH',licenseKey);
- assert.equal(result.courseMatches.length,1);
+ assert.equal(result.courseMatches.length,2);
  assert.ok(result.courseMatches.every(x=>!x.id.includes('minor-consent')&&x.eligibilitySources.length===2));
  }
 });
-test('conditional Oregon and Texas rules do not become recommendations',()=>{
+test('conditional Oregon and Arizona rules do not become recommendations',()=>{
  const base=lookupRequirement('CA','lpc-lpcc-lmhc');
- for(const stateCode of ['OR','TX']){
+ for(const stateCode of ['OR','AZ']){
  assert.equal(createRequirementLookup([{...base,stateCode}]).lookupRequirement(stateCode,base.licenseKey).courseMatches.length,0);
  }
 });

@@ -2,7 +2,7 @@
 
 Latest update October 21, 2026. Published sources only; no inquiries sent. Recognition means a documented provider pathway, including the limited Texas remaining-half route. It is not state approval issued directly to EduCare or a guarantee of any course. Course matching also requires full eligibility and an available catalog entry.
 
-30 state/profession pathways are recognized, six more than the October 20 pass. Fourteen previously enabled state gates remain, but Draft catalog courses are excluded globally. No additional course matches were enabled. See [October 21 state verification](state-verification-20261021.md).
+30 state/profession pathways are recognized, six more than the October 20 pass. Seventeen full state/profession gates are verified after the course-readiness follow-up. Texas uses only the remaining-half provider route. Counseling Systems is restored; Theories remains held. See [October 21 state verification](state-verification-20261021.md).
 
 | State | Profession | Provider pathway | Full course matching | Evidence and remaining checks |
 |---|---|---|---|---|

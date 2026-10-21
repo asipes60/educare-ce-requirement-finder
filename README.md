@@ -96,10 +96,12 @@ State/profession provider and delivery-method evidence is recorded separately in
 complete 150-row review queue. Only verified evidence rows yield recommendations. Provider approval pathways are
 tracked separately under `providerAcceptance`; recognition alone never enables a
 course. See `docs/research/provider-acceptance-review.md` for the current findings.
-California currently recommends the published HIPAA/FERPA and Minor Consent courses.
-Counseling Theories and Counseling Systems are temporarily excluded globally because
-required LearnWorlds sections are Draft. Reviewed non-California combinations
-currently include only HIPAA/FERPA; California Minor Consent remains excluded.
+California currently recommends HIPAA/FERPA, Counseling Systems and Minor Consent.
+Systems now has all six sections published for paid learners. Counseling Theories
+remains excluded pending its Draft sections and completion-template checks. Reviewed
+non-California combinations include HIPAA/FERPA and Systems. Texas LPC, LMFT and LCSW
+are enabled only through the remaining-half provider allocation. Arizona and New Mexico
+social work remain held. See docs/research/course-readiness-followup-20261021.md.
 See docs/research/state-verification-20261021.md for the latest state findings.
 This review does not establish mandatory-topic credit or independently audit
 instructional hours. Coming-soon BACB courses are excluded. Review availability
@@ -123,12 +125,12 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261021-1-verified
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261021-2-ready
 Open in a new tab, rel="noopener noreferrer".
 
 The approved introduction and fallback link are published on the LearnWorlds host
 page. The iframe and direct-open link use the release query above to avoid old
-HTML cached by returning browsers. Entry/dependency modules use `20261021-1` in their import URLs.
+HTML cached by returning browsers. Entry/dependency modules use `20261021-2` in their import URLs.
 Update both release versions when publishing changed scripts.
 
 GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static

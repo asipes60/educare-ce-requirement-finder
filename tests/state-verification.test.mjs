@@ -43,14 +43,24 @@ test('Texas records state the combined other-provider allocation without calling
   assert.match(summary,/not an online.course cap/i);
   assert.match(summary,/CE Broker/i);
   assert.equal(result.lastReviewed,'2026-10-21');
-  assert.equal(result.courseMatches.length,0);
+  assert.deepEqual(result.courseMatches.map(x=>x.id),['nbcc-hipaa-ferpa-school-based','nbcc-counseling-systems']);
+  assert.ok(result.courseMatches.every(x=>x.categoryCredit===null));
   assert.equal(courseEligibility.find(x=>x.stateCode==='TX'&&x.licenseKey===licenseKey).providerAcceptance.status,'recognized');
  }
 });
 
-test('courses with required draft sections cannot be recommended in any state',()=>{
+test('Counseling Theories remains excluded until its required draft sections and certificate are fixed',()=>{
  for(const record of cache.records){
   const result=lookup(record.stateCode,record.licenseKey);
-  assert.ok(result.courseMatches.every(x=>!['nbcc-counseling-theories','nbcc-counseling-systems'].includes(x.id)));
+  assert.ok(result.courseMatches.every(x=>x.id!=='nbcc-counseling-theories'));
+ }
+});
+
+test('published Counseling Systems is restored only through verified evidence gates',()=>{
+ for(const record of cache.records){
+  const result=lookup(record.stateCode,record.licenseKey);
+  const hasSystems=result.courseMatches.some(x=>x.id==='nbcc-counseling-systems');
+  const gate=courseEligibility.find(x=>x.stateCode===record.stateCode&&x.licenseKey===record.licenseKey);
+  assert.equal(hasSystems,record.status==='verified'&&gate?.status==='verified'&&gate.courseIds.includes('nbcc-counseling-systems'));
  }
 });

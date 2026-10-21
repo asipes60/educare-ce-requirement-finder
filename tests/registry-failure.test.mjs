@@ -37,7 +37,7 @@ for(const [name,fetch] of [
     const {controls,submit}=await startApp(fetch);
     assert.match(controls.get('#load-status').textContent,/Full registry unavailable/);
     assert.match(controls.get('#result').innerHTML,/California/);
-    assert.equal((controls.get('#result').innerHTML.match(/class="course-card"/g)||[]).length,2);
+    assert.equal((controls.get('#result').innerHTML.match(/class="course-card"/g)||[]).length,3);
     const ohio=submit('OH');
     assert.match(ohio,/Needs review/);
     assert.doesNotMatch(ohio,/class="course-card"|30 clock hours/);

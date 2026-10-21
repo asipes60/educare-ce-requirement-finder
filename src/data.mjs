@@ -186,7 +186,7 @@ export const educareCourses = [
     "matchType": "general",
     "categoryCredit": null,
     "lastReviewed": "2026-10-21",
-    "availabilityNote": "Required LearnWorlds sections are Draft; held from Finder recommendations until publication and learner access are verified."
+    "availabilityNote": "Required sections remain Draft; completion-template replacement and learner access verification are pending."
   },
   {
     "id": "nbcc-counseling-systems",
@@ -195,13 +195,12 @@ export const educareCourses = [
     "creditUnit": "CE hours",
     "url": "https://educarecomplete.com/course/counseling-systems-for-school-based-application",
     "track": "NBCC",
-    "status": "draft",
+    "status": "available",
     "approvalStatus": "approved",
     "providerStatement": "EduCare, LLC, NBCC ACEP No. 8109.",
     "matchType": "general",
     "categoryCredit": null,
-    "lastReviewed": "2026-10-21",
-    "availabilityNote": "Required LearnWorlds sections are Draft; held from Finder recommendations until publication and learner access are verified."
+    "lastReviewed": "2026-10-21"
   },
   {
     "id": "nbcc-california-minor-consent",
