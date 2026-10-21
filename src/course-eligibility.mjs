@@ -107,7 +107,7 @@ export const courseEligibility = [
       "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
       "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
     ],
-    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare home-study authorization and completion documentation with sponsor address/telephone, presenter, date and clock hours still need verification; no course recommendations enabled.",
+    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare NBCC Home Study authorization is verified. R4-6-803(B) requires completion evidence to include the sponsor telephone number, presenter, date and clock hours. EduCare's current certificate lacks the telephone number; no course recommendations enabled pending that correction.",
     "providerAcceptance": {
       "status": "recognized",
       "reviewedAt": "2026-10-21",
@@ -129,7 +129,7 @@ export const courseEligibility = [
       "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
       "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
     ],
-    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare home-study authorization and completion documentation with sponsor address/telephone, presenter, date and clock hours still need verification; no course recommendations enabled.",
+    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare NBCC Home Study authorization is verified. R4-6-803(B) requires completion evidence to include the sponsor telephone number, presenter, date and clock hours. EduCare's current certificate lacks the telephone number; no course recommendations enabled pending that correction.",
     "providerAcceptance": {
       "status": "recognized",
       "reviewedAt": "2026-10-21",
@@ -151,7 +151,7 @@ export const courseEligibility = [
       "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
       "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
     ],
-    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare home-study authorization and completion documentation with sponsor address/telephone, presenter, date and clock hours still need verification; no course recommendations enabled.",
+    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare NBCC Home Study authorization is verified. R4-6-803(B) requires completion evidence to include the sponsor telephone number, presenter, date and clock hours. EduCare's current certificate lacks the telephone number; no course recommendations enabled pending that correction.",
     "providerAcceptance": {
       "status": "recognized",
       "reviewedAt": "2026-10-21",
@@ -2203,15 +2203,18 @@ export const courseEligibility = [
     "stateCode": "TX",
     "stateName": "Texas",
     "licenseKey": "lpc-lpcc-lmhc",
-    "status": "conditional",
+    "status": "verified",
     "reviewedAt": "2026-10-21",
-    "courseIds": [],
+    "courseIds": [
+      "nbcc-hipaa-ferpa-school-based",
+      "nbcc-counseling-systems"
+    ],
     "sources": [
       "https://bhec.texas.gov/wp-content/uploads/2026/03/LPC-Rulebook-2026-March.pdf",
       "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
       "https://bhec.texas.gov/tbhec/continuingeducation/"
     ],
-    "notes": "Texas permits general CE from any provider within the remaining half: conservatively at most 12 hours for EduCare, combined with all other providers outside the listed-provider half. This is not an online-course cap. Organized third-party courses are outside the informal self-study limit. Actual completion-document fields and course readiness still need verification; no recommendations enabled.",
+    "notes": "General renewal CE only through Texas's remaining-half any-provider route: at most 12 hours from EduCare combined with all other providers outside the listed-provider half. This is a provider allocation, not an online-course cap. Complete the course and retain the provider-issued certificate with learner name, topic, completion date and hours; report it in CE Broker. No required-topic credit is established.",
     "providerAcceptance": {
       "status": "recognized",
       "reviewedAt": "2026-10-21",
@@ -2227,15 +2230,18 @@ export const courseEligibility = [
     "stateCode": "TX",
     "stateName": "Texas",
     "licenseKey": "lmft",
-    "status": "conditional",
+    "status": "verified",
     "reviewedAt": "2026-10-21",
-    "courseIds": [],
+    "courseIds": [
+      "nbcc-hipaa-ferpa-school-based",
+      "nbcc-counseling-systems"
+    ],
     "sources": [
       "https://bhec.texas.gov/wp-content/uploads/2026/03/MFT-Rulebook-2026-March.pdf",
       "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
       "https://bhec.texas.gov/tbhec/continuingeducation/"
     ],
-    "notes": "Texas permits general CE from any provider within the remaining half: conservatively at most 15 hours for EduCare, combined with all other providers outside the listed-provider half. This is not an online-course cap. Organized third-party courses are outside the informal self-study limit. Actual completion-document fields and course readiness still need verification; no recommendations enabled.",
+    "notes": "General renewal CE only through Texas's remaining-half any-provider route: at most 15 hours from EduCare combined with all other providers outside the listed-provider half. This is a provider allocation, not an online-course cap. Complete the course and retain the provider-issued certificate with learner name, topic, completion date and hours; report it in CE Broker. No required-topic credit is established.",
     "providerAcceptance": {
       "status": "recognized",
       "reviewedAt": "2026-10-21",
@@ -2251,15 +2257,18 @@ export const courseEligibility = [
     "stateCode": "TX",
     "stateName": "Texas",
     "licenseKey": "lcsw-lisw",
-    "status": "conditional",
+    "status": "verified",
     "reviewedAt": "2026-10-21",
-    "courseIds": [],
+    "courseIds": [
+      "nbcc-hipaa-ferpa-school-based",
+      "nbcc-counseling-systems"
+    ],
     "sources": [
       "https://bhec.texas.gov/wp-content/uploads/2026/04/SW-Rulebook-2026-March.pdf",
       "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
       "https://bhec.texas.gov/tbhec/continuingeducation/"
     ],
-    "notes": "Texas permits general CE from any provider within the remaining half: conservatively at most 15 hours for EduCare, combined with all other providers outside the listed-provider half. This is not an online-course cap. Organized third-party courses are outside the informal self-study limit. Actual completion-document fields and course readiness still need verification; no recommendations enabled.",
+    "notes": "General renewal CE only through Texas's remaining-half any-provider route: at most 15 hours from EduCare combined with all other providers outside the listed-provider half. This is a provider allocation, not an online-course cap. Complete the course and retain the provider-issued certificate with learner name, topic, completion date and hours; report it in CE Broker. No required-topic credit is established.",
     "providerAcceptance": {
       "status": "recognized",
       "reviewedAt": "2026-10-21",
