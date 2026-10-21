@@ -1,4 +1,6 @@
-# National matching review, 2026-10-20
+# National matching review
+
+Latest checkpoint October 21, 2026: 30 provider pathways recognized; full gates are 14 verified, 27 conditional, 3 additional-approval-required, 106 unresolved. Seven AZ/TX/NM-social-work requirement records corrected and reviewed. No new course matches. Two courses with Draft required sections excluded globally. See [current verification report](state-verification-20261021.md). Earlier dated pass details below are historical.
 
 Scope: 147 additional state/profession combinations. See src/course-eligibility.mjs
 for source links, reviewed dates, specific course IDs and unresolved gates.
@@ -90,7 +92,7 @@ Additional sources inspected:
 - Illinois official 1375.220 amended June 4, 2024: prerecorded remote learning
   requires approved sponsor and exam. NBCC affiliates are not assumed to mean all
   ACEPs. Out-of-state individual approval cannot cure remote sponsor deficiency.
-- New Mexico NMAC 16.63.12: self-directed maximum 10 at board discretion does not
+- New Mexico NMAC 16.63.12: the earlier 10-hour self-directed reading is superseded by the October 7, 2025 replacement (7 hours), verified October 21. This does not
   establish structured NBCC asynchronous course classification. Held.
 - South Carolina official CE guidelines: recorded media/home study documentation
   supported, but NBCC-sponsored versus ACEP-approved-provider remains unresolved.

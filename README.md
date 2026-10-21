@@ -88,7 +88,7 @@ Core fields:
 
 Only records with `Verification Status = Verified` should be eligible for public display.
 
-## Recommendation review (2026-10-20)
+## Recommendation review (2026-10-21)
 
 Course availability and advertised hours were checked against the live EduCare catalog.
 State/profession provider and delivery-method evidence is recorded separately in
@@ -96,8 +96,11 @@ State/profession provider and delivery-method evidence is recorded separately in
 complete 150-row review queue. Only verified evidence rows yield recommendations. Provider approval pathways are
 tracked separately under `providerAcceptance`; recognition alone never enables a
 course. See `docs/research/provider-acceptance-review.md` for the current findings.
-California includes four available courses. Reviewed non-California combinations
-include only the three general courses; California Minor Consent remains excluded.
+California currently recommends the published HIPAA/FERPA and Minor Consent courses.
+Counseling Theories and Counseling Systems are temporarily excluded globally because
+required LearnWorlds sections are Draft. Reviewed non-California combinations
+currently include only HIPAA/FERPA; California Minor Consent remains excluded.
+See docs/research/state-verification-20261021.md for the latest state findings.
 This review does not establish mandatory-topic credit or independently audit
 instructional hours. Coming-soon BACB courses are excluded. Review availability
 before each release.
@@ -106,8 +109,9 @@ Matching is derived at lookup from the reviewed catalog in `src/data.mjs` and th
 from private Airtable IDs. A registry refresh therefore cannot silently erase or
 expand eligibility. The browser loads `public/requirements.json` using a module-
 relative URL compatible with GitHub Pages subpaths and supported build outputs.
-Requirement review dates are preserved; this change does not reverify the 300
-existing requirement summaries.
+Only the seven independently reviewed Arizona, Texas and New Mexico social-work
+requirement records have new October 21 dates. All other requirement summaries and
+review dates are preserved.
 
 ## LearnWorlds copy (published October 20, 2026)
 
@@ -119,12 +123,12 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261020-6-verified
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261021-1-verified
 Open in a new tab, rel="noopener noreferrer".
 
 The approved introduction and fallback link are published on the LearnWorlds host
 page. The iframe and direct-open link use the release query above to avoid old
-HTML cached by returning browsers. Entry/dependency modules use `20261020-6` in their import URLs.
+HTML cached by returning browsers. Entry/dependency modules use `20261021-1` in their import URLs.
 Update both release versions when publishing changed scripts.
 
 GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static

@@ -60,7 +60,7 @@ describe("CE requirement lookup", () => {
   it("keeps conservative course matching from implying pending NBCC approval", () => {
     const result = lookupRequirement("CA", "lpc-lpcc-lmhc");
 
-    assert.equal(result.courseMatches.length, 4);
+    assert.equal(result.courseMatches.length, 2);
     assert.doesNotMatch(JSON.stringify(result), /NBCC approved/i);
   });
 

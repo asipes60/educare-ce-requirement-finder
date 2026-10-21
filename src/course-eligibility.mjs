@@ -100,16 +100,22 @@ export const courseEligibility = [
     "stateCode": "AZ",
     "stateName": "Arizona",
     "licenseKey": "lpc-lpcc-lmhc",
-    "status": "unresolved",
-    "reviewedAt": null,
+    "status": "conditional",
+    "reviewedAt": "2026-10-21",
     "courseIds": [],
-    "sources": [],
-    "notes": "Provider acceptance, delivery method, and course-specific relevance not yet verified.",
+    "sources": [
+      "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
+      "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
+    ],
+    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare home-study authorization and completion documentation with sponsor address/telephone, presenter, date and clock hours still need verification; no course recommendations enabled.",
     "providerAcceptance": {
-      "status": "unresolved",
-      "reviewedAt": null,
-      "sources": [],
-      "basis": "A published provider-acceptance pathway has not yet been established in this review."
+      "status": "recognized",
+      "reviewedAt": "2026-10-21",
+      "sources": [
+        "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
+        "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
+      ],
+      "basis": "R4-6-802(D)(1) and Board CE tracker guidance expressly recognize NBCC and approved online vendors across LPC, LMFT and social work. No additional ordinary Arizona provider preapproval is required."
     }
   },
   {
@@ -117,19 +123,21 @@ export const courseEligibility = [
     "stateName": "Arizona",
     "licenseKey": "lmft",
     "status": "conditional",
-    "reviewedAt": "2026-10-20",
+    "reviewedAt": "2026-10-21",
     "courseIds": [],
     "sources": [
-      "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+      "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
+      "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
     ],
-    "notes": "R4-6-802(D) permits relevant behavioral-health education sponsored or approved by qualifying professional organizations. EduCare provider classification, asynchronous course treatment and R4-6-803 certificate documentation remain unverified; no recommendations enabled.",
+    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare home-study authorization and completion documentation with sponsor address/telephone, presenter, date and clock hours still need verification; no course recommendations enabled.",
     "providerAcceptance": {
-      "status": "unresolved",
-      "reviewedAt": "2026-10-20",
+      "status": "recognized",
+      "reviewedAt": "2026-10-21",
       "sources": [
-        "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+        "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
+        "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
       ],
-      "basis": "The current rule gives broad organization categories, not an explicit EduCare or NBCC ACEP determination. Board renewal and tracker pages returned HTTP 403 during full-text verification."
+      "basis": "R4-6-802(D)(1) and Board CE tracker guidance expressly recognize NBCC and approved online vendors across LPC, LMFT and social work. No additional ordinary Arizona provider preapproval is required."
     }
   },
   {
@@ -137,19 +145,21 @@ export const courseEligibility = [
     "stateName": "Arizona",
     "licenseKey": "lcsw-lisw",
     "status": "conditional",
-    "reviewedAt": "2026-10-20",
+    "reviewedAt": "2026-10-21",
     "courseIds": [],
     "sources": [
-      "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+      "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
+      "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
     ],
-    "notes": "R4-6-802(D) permits relevant behavioral-health education sponsored or approved by qualifying professional organizations. EduCare provider classification, asynchronous course treatment and R4-6-803 certificate documentation remain unverified; no recommendations enabled.",
+    "notes": "Arizona recognizes NBCC-approved education, including approved online vendors. EduCare home-study authorization and completion documentation with sponsor address/telephone, presenter, date and clock hours still need verification; no course recommendations enabled.",
     "providerAcceptance": {
-      "status": "unresolved",
-      "reviewedAt": "2026-10-20",
+      "status": "recognized",
+      "reviewedAt": "2026-10-21",
       "sources": [
-        "https://apps.azsos.gov/public_services/Title_04/4-06.pdf"
+        "https://apps.azsos.gov/public_services/Title_04/4-06.pdf",
+        "https://bbhe.az.gov/sites/default/files/pdfs/CEU%20Tracker%20directions.pdf"
       ],
-      "basis": "The current rule gives broad organization categories, not an explicit EduCare or NBCC ACEP determination. Board renewal and tracker pages returned HTTP 403 during full-text verification."
+      "basis": "R4-6-802(D)(1) and Board CE tracker guidance expressly recognize NBCC and approved online vendors across LPC, LMFT and social work. No additional ordinary Arizona provider preapproval is required."
     }
   },
   {
@@ -1585,16 +1595,18 @@ export const courseEligibility = [
     "stateName": "New Mexico",
     "licenseKey": "lcsw-lisw",
     "status": "conditional",
-    "reviewedAt": "2026-10-20",
+    "reviewedAt": "2026-10-21",
     "courseIds": [],
     "sources": [
+      "https://prod-rf-lambda.rtssaas.com/PublicFiles/d89c47bd0d70402dba89b03a22bda6d1/c02857fb-a2cc-4f8a-bf94-e405760b12e9/16.63.12.html",
+      "https://www.srca.nm.gov/nmac-home/new-mexico-register/volume-xxxvi-issue-19/adopted-rules-issue-19/",
       "https://www.rld.nm.gov/boards-and-commissions/individual-boards-and-commissions/social-work-examiners/faqs/",
-      "https://www.srca.nm.gov/parts/title16/16.063.0012.html"
+      "https://www.rld.nm.gov/boards-and-commissions/individual-boards-and-commissions/social-work-examiners/instructors-training-requirements-and-continuing-education/"
     ],
-    "notes": "Board FAQ expressly accepts NBCC-approved CE. Asynchronous delivery treatment still needs a social-work-specific source; counseling and therapy board modality rules are not transferred to social work. NMAC 16.63.12.14 permits up to 10 self-directed hours at board discretion; that does not by itself classify structured NBCC asynchronous courses or establish their advertised hours.",
+    "notes": "The Board accepts NBCC-approved CE. Replacement NMAC 16.63.12 effective October 7, 2025 allows up to 7 discretionary self-directed hours; published sources do not clearly classify structured NBCC home study separately. Unrestricted asynchronous course eligibility remains unverified; no recommendations enabled.",
     "providerAcceptance": {
       "status": "recognized",
-      "reviewedAt": "2026-10-20",
+      "reviewedAt": "2026-10-21",
       "sources": [
         "https://www.rld.nm.gov/boards-and-commissions/individual-boards-and-commissions/social-work-examiners/faqs/"
       ],
@@ -2192,17 +2204,23 @@ export const courseEligibility = [
     "stateName": "Texas",
     "licenseKey": "lpc-lpcc-lmhc",
     "status": "conditional",
-    "reviewedAt": "2026-10-20",
+    "reviewedAt": "2026-10-21",
     "courseIds": [],
     "sources": [
-      "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/"
+      "https://bhec.texas.gov/wp-content/uploads/2026/03/LPC-Rulebook-2026-March.pdf",
+      "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
+      "https://bhec.texas.gov/tbhec/continuingeducation/"
     ],
-    "notes": "No provider preapproval. At least half of renewal hours must come from specified provider types. Verify profession-specific rules and EduCare provider-type classification before matching.",
+    "notes": "Texas permits general CE from any provider within the remaining half: conservatively at most 12 hours for EduCare, combined with all other providers outside the listed-provider half. This is not an online-course cap. Organized third-party courses are outside the informal self-study limit. Actual completion-document fields and course readiness still need verification; no recommendations enabled.",
     "providerAcceptance": {
-      "status": "unresolved",
-      "reviewedAt": null,
-      "sources": [],
-      "basis": "A published provider-acceptance pathway has not yet been established in this review."
+      "status": "recognized",
+      "reviewedAt": "2026-10-21",
+      "sources": [
+        "https://bhec.texas.gov/wp-content/uploads/2026/03/LPC-Rulebook-2026-March.pdf",
+        "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
+        "https://bhec.texas.gov/tbhec/continuingeducation/"
+      ],
+      "basis": "Verified remaining-half any-provider pathway only, conservatively 12 hours combined with other unlisted providers. NBCC ACEP status alone has not been established as satisfying the listed-provider half."
     }
   },
   {
@@ -2210,17 +2228,23 @@ export const courseEligibility = [
     "stateName": "Texas",
     "licenseKey": "lmft",
     "status": "conditional",
-    "reviewedAt": "2026-10-20",
+    "reviewedAt": "2026-10-21",
     "courseIds": [],
     "sources": [
-      "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/"
+      "https://bhec.texas.gov/wp-content/uploads/2026/03/MFT-Rulebook-2026-March.pdf",
+      "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
+      "https://bhec.texas.gov/tbhec/continuingeducation/"
     ],
-    "notes": "BHEC permits compliant CE from any provider, but at least half of renewal hours must come from specified provider types. Its FAQ distinguishes certificate-based provider courses from informal self-study. EduCare classification and profession-specific credit limits remain unresolved; no recommendations enabled.",
+    "notes": "Texas permits general CE from any provider within the remaining half: conservatively at most 15 hours for EduCare, combined with all other providers outside the listed-provider half. This is not an online-course cap. Organized third-party courses are outside the informal self-study limit. Actual completion-document fields and course readiness still need verification; no recommendations enabled.",
     "providerAcceptance": {
-      "status": "unresolved",
-      "reviewedAt": null,
-      "sources": [],
-      "basis": "A published provider-acceptance pathway has not yet been established in this review."
+      "status": "recognized",
+      "reviewedAt": "2026-10-21",
+      "sources": [
+        "https://bhec.texas.gov/wp-content/uploads/2026/03/MFT-Rulebook-2026-March.pdf",
+        "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
+        "https://bhec.texas.gov/tbhec/continuingeducation/"
+      ],
+      "basis": "Verified remaining-half any-provider pathway only, conservatively 15 hours combined with other unlisted providers. NBCC ACEP status alone has not been established as satisfying the listed-provider half."
     }
   },
   {
@@ -2228,17 +2252,23 @@ export const courseEligibility = [
     "stateName": "Texas",
     "licenseKey": "lcsw-lisw",
     "status": "conditional",
-    "reviewedAt": "2026-10-20",
+    "reviewedAt": "2026-10-21",
     "courseIds": [],
     "sources": [
-      "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/"
+      "https://bhec.texas.gov/wp-content/uploads/2026/04/SW-Rulebook-2026-March.pdf",
+      "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
+      "https://bhec.texas.gov/tbhec/continuingeducation/"
     ],
-    "notes": "BHEC permits compliant CE from any provider, but at least half of renewal hours must come from specified provider types. Its FAQ distinguishes certificate-based provider courses from informal self-study. EduCare classification and profession-specific credit limits remain unresolved; no recommendations enabled.",
+    "notes": "Texas permits general CE from any provider within the remaining half: conservatively at most 15 hours for EduCare, combined with all other providers outside the listed-provider half. This is not an online-course cap. Organized third-party courses are outside the informal self-study limit. Actual completion-document fields and course readiness still need verification; no recommendations enabled.",
     "providerAcceptance": {
-      "status": "unresolved",
-      "reviewedAt": null,
-      "sources": [],
-      "basis": "A published provider-acceptance pathway has not yet been established in this review."
+      "status": "recognized",
+      "reviewedAt": "2026-10-21",
+      "sources": [
+        "https://bhec.texas.gov/wp-content/uploads/2026/04/SW-Rulebook-2026-March.pdf",
+        "https://bhec.texas.gov/tbhec/continuing-education-ce-faqs/",
+        "https://bhec.texas.gov/tbhec/continuingeducation/"
+      ],
+      "basis": "Verified remaining-half any-provider pathway only, conservatively 15 hours combined with other unlisted providers. NBCC ACEP status alone has not been established as satisfying the listed-provider half."
     }
   },
   {

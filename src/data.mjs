@@ -180,12 +180,13 @@ export const educareCourses = [
     "creditUnit": "CE hours",
     "url": "https://educarecomplete.com/course/advanced-counseling-theories-school-based-practice-application-ethics-diversity",
     "track": "NBCC",
-    "status": "available",
+    "status": "draft",
     "approvalStatus": "approved",
     "providerStatement": "EduCare, LLC, NBCC ACEP No. 8109.",
     "matchType": "general",
     "categoryCredit": null,
-    "lastReviewed": "2026-10-20"
+    "lastReviewed": "2026-10-21",
+    "availabilityNote": "Required LearnWorlds sections are Draft; held from Finder recommendations until publication and learner access are verified."
   },
   {
     "id": "nbcc-counseling-systems",
@@ -194,12 +195,13 @@ export const educareCourses = [
     "creditUnit": "CE hours",
     "url": "https://educarecomplete.com/course/counseling-systems-for-school-based-application",
     "track": "NBCC",
-    "status": "available",
+    "status": "draft",
     "approvalStatus": "approved",
     "providerStatement": "EduCare, LLC, NBCC ACEP No. 8109.",
     "matchType": "general",
     "categoryCredit": null,
-    "lastReviewed": "2026-10-20"
+    "lastReviewed": "2026-10-21",
+    "availabilityNote": "Required LearnWorlds sections are Draft; held from Finder recommendations until publication and learner access are verified."
   },
   {
     "id": "nbcc-california-minor-consent",

@@ -1,10 +1,10 @@
-import { courseEligibility } from "./course-eligibility.mjs?v=20261020-6";
+import { courseEligibility } from "./course-eligibility.mjs?v=20261021-1";
 import {
   educareCourses,
   licenseFamilies,
   states,
   verifiedRequirements,
-} from "./data.mjs?v=20261020-6";
+} from "./data.mjs?v=20261021-1";
 
 const stateCodes = new Set(states.map((state) => state.code));
 const licenseKeys = new Set(licenseFamilies.map((license) => license.key));
