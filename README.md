@@ -125,12 +125,12 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261023-1-public
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261021-2-ready
 Open in a new tab, rel="noopener noreferrer".
 
 The approved introduction and fallback link are published on the LearnWorlds host
 page. The iframe and direct-open link use the release query above to avoid old
-HTML cached by returning browsers. Entry/dependency modules use `20261023-1` in their import URLs.
+HTML cached by returning browsers. Entry/dependency modules use `20261021-2` in their import URLs.
 Update both release versions when publishing changed scripts.
 
 GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static
@@ -237,5 +237,6 @@ Public course and requirement objects use explicit field lists. Both deployment
 builds include only the browser runtime modules, excluding the private registry
 importer. The regression checks cover all 300 requirement selections, the
 unverified course holds, excluded draft courses, and Texas/Virginia/Washington
-learner conditions. Release scripts use `20261023-1`; the host embed and fallback
-use `20261023-1-public` to refresh returning browsers.
+learner conditions. Release scripts use `20261023-1`. The corrected app was verified through the
+existing live LearnWorlds iframe. The integration template supplies
+`20261023-1-public` for the next host save; no host markup change was required.
