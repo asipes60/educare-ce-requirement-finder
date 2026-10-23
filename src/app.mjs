@@ -3,7 +3,7 @@ import {
   getLicenseOptions,
   getStateOptions,
   lookupRequirement,
-} from "./ce-finder.mjs?v=20261021-2";
+} from "./ce-finder.mjs?v=20261023-1";
 
 const stateSelect = document.querySelector("#state");
 const loadStatus = document.querySelector("#load-status");
@@ -57,30 +57,25 @@ function renderSources(sourceUrls) {
   return `<div class="source-list">${links}</div>`;
 }
 
-function renderCourseMatches(courseMatches, eligibilityNotes) {
-  if (!courseMatches.length) {
-    return `
-      <div class="empty-match">
-        <strong>No conservatively matched EduCare course yet.</strong>
-        <span>Course eligibility has not been established for this selection. Confirm accepted providers and course formats with your board.</span>
-        <p>${eligibilityNotes ?? ""}</p>
-      </div>
-    `;
-  }
-
-  const cards = courseMatches
-    .map(
-      (course) => `
-        <article class="course-card">
-          <h4>${course.title}</h4>
-          <p>${course.creditValue} ${course.creditUnit}</p>
-          <small>${course.providerStatement}</small><p>General renewal CE. Required-category credit has not been verified.</p><p>${course.eligibilityNotes}</p><p>Course eligibility reviewed ${course.eligibilityReviewedAt}</p>${renderSources(course.eligibilitySources)}<a href="${course.url}" target="_blank" rel="noopener noreferrer">View course</a>
-        </article>
-      `
-    )
-    .join("");
-
-  return `<div class="course-grid">${cards}</div>`;
+function renderCourseMatches(courseMatches) {
+  if (!courseMatches.length) return "";
+  const cards = courseMatches.map((course) => `
+    <article class="course-card">
+      <h4>${course.title}</h4>
+      <p>${course.creditValue} ${course.creditUnit}</p>
+      <small>${course.providerStatement}</small>
+      <a href="${course.url}" target="_blank" rel="noopener noreferrer">View course</a>
+    </article>
+  `).join("");
+  const conditions = courseMatches[0].learnerConditions.map(condition => `<p>${condition}</p>`).join("");
+  return `<section>
+    <h3>EduCare course matches</h3>
+    <p>General renewal CE only. Choose separate courses for required topics.</p>
+    ${conditions}
+    <div class="course-grid">${cards}</div>
+    <p>Course eligibility reviewed ${courseMatches[0].eligibilityReviewedAt}</p>
+    ${renderSources(courseMatches[0].eligibilitySources)}
+  </section>`;
 }
 
 function renderVerified(result) {
@@ -99,10 +94,7 @@ function renderVerified(result) {
         <h3>Required categories</h3>
         ${renderCategoryList(result.categories)}
       </section>
-      <section>
-        <h3>EduCare course matches</h3>
-        ${renderCourseMatches(result.courseMatches, result.courseEligibilityNotes)}
-      </section>
+      ${renderCourseMatches(result.courseMatches)}
       <footer>
         <p>${result.board}</p>
         ${renderSources(result.sourceUrls)}
@@ -115,13 +107,12 @@ function renderNeedsReview(result) {
   return `
     <article class="result-card needs-review">
       <div class="status-row">
-        <span class="status-pill">Needs review</span>
-        <span>Registry placeholder</span>
+        <span class="status-pill">Requirements unavailable</span>
       </div>
       <h2>${result.stateName} ${result.licenseLabel}</h2>
       <p>${result.message}</p>
       <p class="muted">
-        This tool will not display CE totals until the licensing board source has been reviewed and dated.
+        Use the current requirements published by your board or certification body.
       </p>
     </article>
   `;

@@ -131,9 +131,6 @@ const californiaBbsBase = {
     "https://www.bbs.ca.gov/pdf/forms/cechart.pdf",
   ],
   lastReviewed: "2026-06-14",
-  reviewerNotes:
-    "Seed record verified from California BBS continuing education page and CE summary chart. Keep BBS source links live for periodic review.",
-  courseMatchIds: [],
 };
 
 export const verifiedRequirements = [
@@ -157,7 +154,7 @@ export const verifiedRequirements = [
   },
 ];
 
-// Explicitly reviewed general CE eligibility. No required-category claims.
+// Published courses only. Draft readiness details stay in the audit evidence.
 export const educareCourses = [
   {
     "id": "nbcc-hipaa-ferpa-school-based",
@@ -172,21 +169,6 @@ export const educareCourses = [
     "matchType": "general",
     "categoryCredit": null,
     "lastReviewed": "2026-10-20"
-  },
-  {
-    "id": "nbcc-counseling-theories",
-    "title": "Counseling Theories for School-Based Practice",
-    "creditValue": 4,
-    "creditUnit": "CE hours",
-    "url": "https://educarecomplete.com/course/advanced-counseling-theories-school-based-practice-application-ethics-diversity",
-    "track": "NBCC",
-    "status": "draft",
-    "approvalStatus": "approved",
-    "providerStatement": "EduCare, LLC, NBCC ACEP No. 8109.",
-    "matchType": "general",
-    "categoryCredit": null,
-    "lastReviewed": "2026-10-21",
-    "availabilityNote": "Required sections remain Draft; completion-template replacement and learner access verification are pending."
   },
   {
     "id": "nbcc-counseling-systems",

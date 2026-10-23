@@ -1,10 +1,10 @@
-import { courseEligibility } from "./course-eligibility.mjs?v=20261021-2";
+import { courseEligibility } from "./course-eligibility.mjs?v=20261023-1";
 import {
   educareCourses,
   licenseFamilies,
   states,
   verifiedRequirements,
-} from "./data.mjs?v=20261021-2";
+} from "./data.mjs?v=20261023-1";
 
 const stateCodes = new Set(states.map((state) => state.code));
 const licenseKeys = new Set(licenseFamilies.map((license) => license.key));
@@ -22,18 +22,16 @@ function buildRequirementKey(stateCode, licenseKey) {
 }
 
 function clonePublicRequirement(requirement) {
-  const {
-    reviewerNotes,
-    courseMatchIds,
-    ...publicRequirement
-  } = requirement;
-
+  // Explicit public fields prevent future private audit fields entering the response.
+  const { id, status, stateCode, stateName, licenseKey, licenseLabel, board,
+    renewalCycle, totalHours, unitLabel, lastReviewed } = requirement;
   return {
-    ...publicRequirement,
-    categories: requirement.categories.map((category) => ({ ...category })),
+    id, status, stateCode, stateName, licenseKey, licenseLabel, board,
+    renewalCycle, totalHours, unitLabel, lastReviewed,
+    ...(requirement.requirementSummary ? { requirementSummary: [...requirement.requirementSummary] } : {}),
+    categories: requirement.categories.map(({ summary, name, hours, recurrence, countsTowardTotal, notes }) =>
+      summary ? { summary } : { name, hours, recurrence, countsTowardTotal, notes }),
     courseMatches: buildCourseMatches(requirement),
-    courseEligibilityStatus: courseEligibility.find(row => row.stateCode === requirement.stateCode && row.licenseKey === requirement.licenseKey)?.status ?? "unresolved",
-    courseEligibilityNotes: courseEligibility.find(row => row.stateCode === requirement.stateCode && row.licenseKey === requirement.licenseKey)?.notes ?? "Course eligibility has not been verified for this credential.",
     sourceUrls: [...requirement.sourceUrls],
   };
 }
@@ -41,11 +39,16 @@ function clonePublicRequirement(requirement) {
 function buildCourseMatches(requirement) {
   if (requirement.status !== "verified") return [];
   const eligibility = courseEligibility.find(row => row.stateCode === requirement.stateCode && row.licenseKey === requirement.licenseKey);
-  if (eligibility?.status !== "verified") return [];
+  if (eligibility?.status !== "verified" || !eligibility.reviewedAt || !eligibility.sources.length) return [];
   return educareCourses
     .filter(course => course.approvalStatus === "approved" && course.status === "available"
       && eligibility.courseIds.includes(course.id))
-    .map(({ eligibleStates, eligibleLicenses, approvalStatus, status, ...course }) => ({...course, eligibilitySources: [...eligibility.sources], eligibilityNotes: eligibility.notes, eligibilityReviewedAt: eligibility.reviewedAt}));
+    .map(({ id, title, creditValue, creditUnit, providerStatement, url, matchType, categoryCredit }) => ({
+      id, title, creditValue, creditUnit, providerStatement, url, matchType, categoryCredit,
+      learnerConditions: [...eligibility.learnerConditions],
+      eligibilitySources: [...eligibility.sources],
+      eligibilityReviewedAt: eligibility.reviewedAt,
+    }));
 }
 
 function buildPlaceholderRequirement(stateCode, licenseKey) {
@@ -68,7 +71,7 @@ function buildPlaceholderRequirement(stateCode, licenseKey) {
     lastReviewed: null,
     courseMatches: [],
     message:
-      "This state and license combination is in the registry queue but has not been verified yet.",
+      "Requirements for this selection are not available. Consult your licensing board or certification body.",
   };
 }
 
