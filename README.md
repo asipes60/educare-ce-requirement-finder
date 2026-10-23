@@ -92,9 +92,9 @@ Only records with `Verification Status = Verified` should be eligible for public
 
 Course availability and advertised hours were checked against the live EduCare catalog.
 State/profession provider and delivery-method evidence is recorded separately in
-`src/course-eligibility.mjs`; see `docs/research/course-eligibility-review.md` for the
+`docs/research/course-eligibility-evidence.mjs`; see `docs/research/course-eligibility-review.md` for the
 complete 150-row review queue. Only verified evidence rows yield recommendations. Provider approval pathways are
-tracked separately under `providerAcceptance`; recognition alone never enables a
+tracked separately under `providerAcceptance` in that audit evidence; recognition alone never enables a
 course. See `docs/research/provider-acceptance-review.md` for the current findings.
 California currently recommends HIPAA/FERPA, Counseling Systems and Minor Consent.
 Systems now has all six sections published for paid learners. Counseling Theories
@@ -125,12 +125,12 @@ relevant EduCare courses. Check the review date and confirm requirements with
 your licensing board or certification body before enrolling.
 
 Having trouble loading the Finder? Open the CE Requirement Finder directly.
-Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261021-2-ready
+Destination: https://asipes60.github.io/educare-ce-requirement-finder/?v=20261023-1-public
 Open in a new tab, rel="noopener noreferrer".
 
 The approved introduction and fallback link are published on the LearnWorlds host
 page. The iframe and direct-open link use the release query above to avoid old
-HTML cached by returning browsers. Entry/dependency modules use `20261021-2` in their import URLs.
+HTML cached by returning browsers. Entry/dependency modules use `20261023-1` in their import URLs.
 Update both release versions when publishing changed scripts.
 
 GitHub Pages serves the separate `gh-pages` branch, not `main`. Publish the static
@@ -216,3 +216,26 @@ additional-approval requirement explicitly. Arizona LMFT/LCSW and Texas
 LMFT/LCSW reviews remain held. All 14 enabled combinations remain unchanged.
 Only the two Connecticut requirement review dates changed in this follow-up.
 See `docs/research/mobile-state-followup-20261020.md` for measurement and source details.
+
+## Public course display correction (October 23, 2026)
+
+Course approval work notes are excluded from the public application. Selections
+without verified course eligibility show the board requirements and source links
+without an EduCare course section. This change establishes no new state approval.
+The 17 existing verified state/profession combinations retain their available
+courses, general-renewal scope and relevant learner conditions. Arizona and
+New Mexico social work remain excluded; Theories remains excluded everywhere.
+
+`docs/research/course-eligibility-evidence.mjs` preserves the complete 150-row
+audit source. It is excluded from every website deployment. The public
+`src/course-eligibility.mjs` contains only verified pairs, published course IDs,
+review dates, sources and deliberately written learner conditions. Keep the
+public list aligned with the audit evidence when making authorized eligibility
+changes. Never copy audit notes or provider-review rationale into it.
+
+Public course and requirement objects use explicit field lists. Both deployment
+builds include only the browser runtime modules, excluding the private registry
+importer. The regression checks cover all 300 requirement selections, the
+unverified course holds, excluded draft courses, and Texas/Virginia/Washington
+learner conditions. Release scripts use `20261023-1`; the host embed and fallback
+use `20261023-1-public` to refresh returning browsers.

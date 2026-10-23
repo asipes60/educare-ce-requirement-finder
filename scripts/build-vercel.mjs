@@ -7,7 +7,11 @@ const output = join(root, "vercel-static");
 
 const copies = [
   ["index.html", "index.html"],
-  ["src", "src"],
+  ["src/app.mjs", "src/app.mjs"],
+  ["src/ce-finder.mjs", "src/ce-finder.mjs"],
+  ["src/course-eligibility.mjs", "src/course-eligibility.mjs"],
+  ["src/data.mjs", "src/data.mjs"],
+  ["src/styles.css", "src/styles.css"],
   ["assets", "assets"],
   ["public/requirements.json", "api/requirements"],
   ["public/requirements.json", "requirements.json"],

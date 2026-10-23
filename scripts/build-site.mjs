@@ -19,7 +19,6 @@ const contentTypes = new Map([
 const sourceFiles = [
   "index.html",
   "src/app.mjs",
-  "src/airtable-registry.mjs",
   "src/ce-finder.mjs",
   "src/course-eligibility.mjs",
   "src/data.mjs",

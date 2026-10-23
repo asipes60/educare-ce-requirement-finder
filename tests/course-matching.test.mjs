@@ -37,7 +37,7 @@ test('conditional Oregon and Arizona rules do not become recommendations',()=>{
 });
 
 test('all state/profession combinations have explicit evidence gates',async()=>{
- const {courseEligibility}=await import('../src/course-eligibility.mjs');
+ const {courseEligibility}=await import('../docs/research/course-eligibility-evidence.mjs');
  assert.equal(courseEligibility.length,150);
  assert.equal(new Set(courseEligibility.map(x=>`${x.stateCode}:${x.licenseKey}`)).size,150);
  assert.ok(courseEligibility.filter(x=>x.status==='verified').every(x=>x.sources.length&&x.reviewedAt&&x.courseIds.length));

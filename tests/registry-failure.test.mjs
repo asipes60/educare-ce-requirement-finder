@@ -39,7 +39,7 @@ for(const [name,fetch] of [
     assert.match(controls.get('#result').innerHTML,/California/);
     assert.equal((controls.get('#result').innerHTML.match(/class="course-card"/g)||[]).length,3);
     const ohio=submit('OH');
-    assert.match(ohio,/Needs review/);
+    assert.match(ohio,/Requirements unavailable/);
     assert.doesNotMatch(ohio,/class="course-card"|30 clock hours/);
   });
 }

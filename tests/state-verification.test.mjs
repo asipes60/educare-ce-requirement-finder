@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createRequirementLookup} from '../src/ce-finder.mjs';
-import {courseEligibility} from '../src/course-eligibility.mjs';
+import {courseEligibility} from '../docs/research/course-eligibility-evidence.mjs';
 
 const cache=JSON.parse(readFileSync(new URL('../public/requirements.json',import.meta.url),'utf8'));
 const lookup=createRequirementLookup(cache.records).lookupRequirement;
